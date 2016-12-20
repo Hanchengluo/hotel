@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>DB类方法生成器</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<br/>
+<form action="" method='get'>
+SQL：<input type='text' id='sql' name='sql' value='{%$g_show.sql%}' size="120"/><br>
+函数名：<input type='text' id='function_name' name='function_name' value='{%$g_show.function_name|default:'get_xxx_list'%}' size="30"/><br>
+
+<span style="color:#aaa">
+select * from tbl where {状态}=1 and d_id=${d_id} order by create_time desc limit 0,10;<br>
+select count(*) from tbl where {状态}=1 and d_id=${d_id} order by create_time desc limit 0,10;<br>
+</span>
+ 
+<input type='submit' value=' 提 交 ' />
+</form>
+
+<textarea style='width:900px;height:500px'>
+
+{%$g_show.code%}
+
+</textarea>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

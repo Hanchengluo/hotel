@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_submit()
+{
+
+	var project_id = $("project_id").value;
+	var template_id = $("template_id").value;
+	var field_id = $("field_id").value;
+	var field_name = $("field_name").value;
+	var field_alias = $("field_alias").value;
+	var field_type = $("field_type").value;
+	var field_value_default = $("field_value_default").value;
+	var field_value_arithmetic = $("field_value_arithmetic").value;
+	var field_value_prompt = $("field_value_prompt").value;
+	var field_sort_id = $("field_sort_id").value;
+	var field_input_width = $("field_input_width").value;
+	var field_input_height = $("field_input_height").value;
+	var field_show_doclist = $("field_show_doclist").value;
+	var status = $("status").value;
+	
+    var postData = [];
+    postData.push("project_id=" + project_id);
+    postData.push("template_id=" + template_id); 
+    postData.push("field_id=" + field_id); 
+    postData.push("field_name=" + field_name);
+    postData.push("field_alias=" + field_alias);
+    postData.push("field_type=" + field_type);
+    postData.push("field_value_default=" + field_value_default); 
+    postData.push("field_value_arithmetic=" + field_value_arithmetic); 
+    postData.push("field_value_prompt=" + field_value_prompt);
+    postData.push("field_sort_id=" + field_sort_id); 
+    postData.push("field_input_width=" + field_input_width); 
+    postData.push("field_input_height=" + field_input_height); 
+    postData.push("field_show_doclist=" + field_show_doclist); 
+    postData.push("status=" + status); 
+    
+    SetAjax("tempdef_edit_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("更新成功！");
+            location.reload();
+        }       
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+</script>
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+	<a href='tempdef_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}' >新建模板域</a>
+	<a href='tempdef_field_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&field_id={%$g_show.field_id%}' >修改模板绑定数据字段</a>
+</div>
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<table style='width:100%'>
+  <tr align="center">
+    <td><b>项目</b></td><td><b>值</b></td>
+    {%$g_show.list%}	
+  </tr>
+
+</table>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+  "name": "酒店平台",
+  "description":"运行在tvos2.0上",  
+  "version": "1.0",
+  "permissions": [
+    "webstore", 
+    "device",
+    "management",
+    "dvb",
+    "socket",
+    "alarms",
+    "file",
+    "pushmessage",
+    "sysctl",
+    "<all_urls>"
+  ],
+  
+  "start_url": "index.html"
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_submit()
+{
+
+	var project_id = $("project_id").value;
+	var project_name = $("project_name").value;
+	var project_detail = $("project_detail").value;
+	var project_ename = $("project_ename").value;
+	var status = $("status").value;
+	
+    var postData = [];
+    postData.push("project_id=" + project_id);
+    postData.push("project_name=" + project_name); 
+    postData.push("project_detail=" + project_detail); 
+    postData.push("project_ename=" + project_ename); 
+    postData.push("status=" + status); 
+    
+    SetAjax("project_edit_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("更新成功！");
+            location.reload();
+        }       
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+</script>
+
+<div width='100%' style='text-align:left'>
+</div>
+
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages"></div>
+
+<table style='width:100%'>
+  <tr align="center">
+    <td><b>项目</b></td><td><b>值</b></td>
+    <tr><td>project_id</td>			<td>{%$g_show.list.project_id%}<input type='hidden' size='80' id='project_id' name='project_id' value='{%$g_show.list.project_id%}' /></td></tr>
+<tr><td>project_name</td>		<td><input type='text)' size='80' id='project_name' name='project_name' value='{%$g_show.list.project_name%}' /></td></tr>
+<tr><td>project_detail</td>		<td><input type='text' size='80' id='project_detail' name='project_detail' value='{%$g_show.list.project_detail%}' /></td></tr>
+<tr><td>project_ename</td>		<td><input type='text' size='80' id='project_ename' name='project_ename' value='{%$g_show.list.project_ename%}' /></td></tr>
+<tr><td>status</td>				<td><input type='text' size='80' id='status' name='status' value='{%$g_show.list.status%}' /></td></tr>
+<tr><td></td>					<td><input type='submit' value=' 提 交 ' onclick='on_submit();'/>&nbsp;<input type='submit' value=' 返 回 ' onclick='history.back()'/></td></tr>
+  </tr>
+
+</table>
+
+<div class="pages"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

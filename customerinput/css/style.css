@@ -1,0 +1,268 @@
+body,input,textarea,select{ color:#000; font-family: Arial,Helvetica,sans-serif;}
+body{
+    margin: 0;
+    padding: 0;
+    background-color:rgba(35, 35, 173, 0.84);
+    overflow: hidden;
+}
+#loginmoduler{
+    margin: 0 auto;
+    width: 526px;
+    height: 279px;
+    margin-top: 150px;
+    background: url("../img/login-bg.png");
+    font-size: 16px;
+}
+#logininput{
+    padding-top: 80px;
+    padding-left: 40px;
+    width: 202px;
+    height: 99px;
+}
+#loginusername{
+    width: 162px;
+    height:45px;
+    background: url("../img/login-txt.png") no-repeat;
+    padding-left: 40px;
+    border: none;
+}
+#loginpassword{
+    width: 162px;
+    height:45px;
+    background: url("../img/login-txt.png") no-repeat;
+    padding-left: 40px;
+    background-position: 0 -57px;
+    border: none;
+}
+.loginbutton{
+    font-size: 20px;
+    color: black;
+    width:90px;
+    height:30px;
+    background-image: url("../img/login-bnt.png");
+    border:0px;
+    overflow: hidden;
+}
+#header{
+    margin: 0 auto;
+    width: 1280px;
+
+}
+#titlemsg{
+    font-size: 40px;
+    font-weight: bolder;
+    color: white;
+    width: 1180px;
+    background: url("../img/top.png");
+    height: 66px;
+    padding-left: 100px;
+}
+#msgexitbutton{
+    width:96px;
+    height:29px;
+    background-image: url("../img/bnt_exit.png"); 
+    margin-right: 100px;
+    margin-top: 20px;
+    float: right;
+}
+#content{
+    width: 1280px;
+    margin: 0 auto;
+}
+#content-top{
+    margin-top: 20px;
+}
+#content-center{
+    width: 1280px;
+    height: 500px;
+    background-color:#0E0080;
+    border-radius:9px;
+    -webkit-border-radius:12px;
+    -moz-border-radius: 9px;
+    overflow-y: scroll;
+}
+.cusbutton{
+    width:130px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    text-shadow:1px 1px 1px #333;
+    border:0px;
+    border-radius: 15px;
+}
+#finputtext{
+    width:980px;
+    height:48px;
+    background-color:#D2D9EF;
+    border:0px;
+    overflow: hidden;
+    font-size: 30px;
+    line-height: 48px;
+}
+
+#promptbox{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:400px; 
+    height:150px;
+    background-color:#C9C9E0;
+    border:5px solid black;
+    display:none;
+    z-index: 999;
+    margin-left:-200px;
+    margin-top:-75px;
+    border-radius:9px;
+    -webkit-border-radius:15px;
+    -moz-border-radius: 9px;
+    text-align: center;
+    line-height: 150px;
+    overflow: hidden;
+    font-size: 30px;
+    color: #191717;
+}
+#cuspromptdiv{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:400px; 
+    height:150px;
+    background-color:#C9C9E0;
+    border:2px solid black;
+    display:none;
+    z-index: 9999;
+    margin-left:-200px;
+    margin-top:-75px;
+    border-radius:9px;
+    -webkit-border-radius:15px;
+    -moz-border-radius: 9px;
+    /*    text-align: center;*/
+    /*    line-height: 150px;
+        overflow: hidden;*/
+    font-size: 30px;
+    color: #191717;
+}
+#exitpromptdiv{
+    position: absolute;
+    top:50%;
+    left:50%;
+    width:450px; 
+    height:150px;
+    background-color:#9494EF;
+    border:3px solid black;
+    display:none;
+    z-index: 9999;
+    margin-left:-225px;
+    margin-top:-75px;
+    border-radius:9px;
+    -webkit-border-radius:15px;
+    -moz-border-radius: 9px;
+    /*    text-align: center;*/
+    /*    line-height: 150px;
+        overflow: hidden;*/
+    font-size: 30px;
+    color: #191717;
+}
+
+
+.cusmsgdel{
+    /*display: block;*/
+    width:48px;
+    height:48px;
+    background-image: url("../img/del.png"); 
+    border-radius:10px;
+    -webkit-border-radius:15px;
+    -moz-border-radius: 10px;
+}
+
+.cusbuttonupd{
+    line-height: 50px;
+    text-align: center;
+    font-size: 25px;
+    border-radius: 15px;
+
+}
+
+#customermsglist{
+    width: 100%;
+    overflow-x:auto;
+    overflow-y:auto;
+    background: #D2D9EF;
+}
+
+#customermsglist tr{
+    width:1000px;
+    height:41px;
+    font-size: 20px;
+    line-height: 62px;
+    overflow: hidden;
+    text-align: center;
+    /*   border-bottom:1px solid black;*/
+}
+
+#cusaddinputbox{
+    position: relative;
+    z-index: 999;
+    display:none;
+    top: -530px;
+}
+#cusupdatebox{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    background-color:#1C20B1;
+    width:560px;
+    height:510px;
+    z-index: 9999;
+    border: 4px solid #220794;
+    margin-top:-280px; 
+    margin-left:-255px;
+    border-radius:9px;
+    -webkit-border-radius:15px;
+    -moz-border-radius: 9px;
+    /*text-align: center;
+    line-height: 510px;
+    overflow: hidden;
+    color:white;
+    font-size: 30px;*/
+    display:none;
+}
+#cusupdateform{
+    position: absolute;
+    top:80px;
+    left:50px;
+    text-align: center;
+    color:white;
+    font-size: 30px;
+    width:460px;
+    height:300px;
+    /*background-color: yellow;*/
+}
+.cusinputbox{
+    width:300px;
+    height:50px;
+    font-size: 25px;
+}
+.cusinputbtn{
+    width:50px;
+    height:20px;
+}
+
+.listelementstyle{
+    width:273px;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    text-align: center;
+}
+.listupdtitlestyle{
+    width:272px;
+    height: 60px;
+    font-size: 30px;
+    text-align: center;
+    line-height: 60px;
+    overflow: hidden;
+    background-color: #96B2F3;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_delete(pid)
+{
+	if (!confirm("确认删除策略" + name + "(" + gid + ")！"))
+	{
+		return false;
+	}
+	
+	
+    var postData = [];
+    postData.push("gid=" + gid); 
+		
+    SetAjax("policy_del_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("删除成功！");
+            location.reload();
+        }       
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+function CheckAll() {
+	form=document.template_user;
+	for (var i=0;i<form.elements.length;i++) {
+		var e = form.elements[i];
+		if (e.name != 'chkall' && !e.disabled)
+		e.checked = document.getElementById('chkall').checked;
+	}
+}	
+</script>
+
+<div width='100%' style='text-align:left'>
+</div>
+<div width='100%' class="platform_error">
+
+</div>
+<form name="template_user" action='p_template_user_edit_post.php' method='post' target='iframe_data'>
+<input type="hidden" name='project_id' value="{%$g_show.project_id%}">
+<input type="hidden" name='uid' value="{%$g_show.uid%}">
+<div class="pages"></div>
+  <tr align="center"><td colspan=3>项目：<b> {%$g_show.project_name%} </b> 用户：<b> {%$g_show.user_name%} </b> 模板权限</td>  </tr>
+<table style='width:100%'>
+  <tr align="center">
+    <td width="20%"><b>模板ID</b></td>
+    <td><b>模板名</b></td>
+    <td> <input type="checkbox" name="chkall" id="chkall" onclick="CheckAll()"/ >全选 </input></td>
+
+  </tr>
+  
+  {%section name=count loop=$g_show.list%}
+<tr>
+	<td {%if $g_show.list[count].checked==1%}style='background-color:#ff0'{%/if%}>{%$g_show.list[count].template_id%}</td>
+	<td {%if $g_show.list[count].checked==1%}style='background-color:#ff0'{%/if%}>{%$g_show.list[count].template_name%}</td>
+	<td {%if $g_show.list[count].checked==1%}style='background-color:#ff0'{%/if%}><input type='checkbox' id='uids[]' name='uids[]' value={%$g_show.list[count].template_id%} {%if $g_show.list[count].checked==1%} checked{%/if%}/></td>
+</tr>
+{%/section%}
+</table>
+<br/>
+
+<input type='submit' value=' 提 交 ' /> <input type='button' onclick='history.back(-1)' value=' 返 回 ' />
+</form>
+<iframe style='display:none' id='iframe_data' name='iframe_data' src='' />
+<div class="pages"></div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+<script>
+	
+	
+	</script>
+</html>

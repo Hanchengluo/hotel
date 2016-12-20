@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+<meta name="author" content="liushuai" />
+<meta name="copyright" content="SINA 1996-2010" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<meta http-equiv="X-UA-Compatible" content="IE=7" />
+<title>个人中心管理后台 - 表状态页</title>
+<link href="/css/food/default.dfzDatePicker.css" type="text/css" rel="stylesheet" media="screen" />
+<link href="/css/jqueryui/redmond/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+<link href="/admin/style/user/admin.css" type="text/css" rel="stylesheet" media="screen" />
+<!--[if IE]>
+<link href="/admin/style/user/admin_ie.css" type="text/css" rel="stylesheet" media="screen" />
+<![endif]-->
+<link href="/css/jqueryui/redmond/jquery-ui.css" rel="stylesheet" type="text/css" />
+
+<style>
+.account-info2 td{
+	padding:10px 0;
+}
+.account-info2 th{
+	margin:0;
+	padding:0 10px;
+}
+</style>
+</head>
+<body>
+<div id="container">
+    <div class="sec-title">
+        <h3>数据表列表<span></span></h3>
+    </div>
+    <div class="wrap">
+       
+        <div class="points-info dfz-slip-box">
+            <div class="line"></div>
+            <ul class="con-box points-table">
+            	
+                <li>
+                    <table class="table-list" cellpadding="0" cellspacing="0" border =1>
+                        <thead>
+							<th><a href="javascript:void(0)" onclick="location.href='get_table_status.php?order=common'">表名</a></th>
+							<th ><a  href="javascript:void(0)" onclick="location.href='get_table_status.php?order=row'">行数</a></th>
+							<th><a href="javascript:void(0)"  onclick="location.href='get_table_status.php?order=data_length'">数据字节</a></th>
+							<th><a href="javascript:void(0)"  onclick="location.href='get_table_status.php?order=index_length'">索引字节</a></th>
+							<th><a href="javascript:void(0)"  onclick="location.href='get_table_status.php?order=size'">总字节</a></th>
+							
+                        </thead>
+                        <tbody>
+                    	{%foreach from=$g_show.table_status_list item=val%}
+						<tr>
+							<td style="text-align:left">{%$val.Name%}</td>
+							<td>{%$val.Rows%}</td>
+							<td>{%$val.Data_length%}</td>
+							<td>{%$val.Index_length%}</td>
+							<td>{%$val.table_size%}</td>
+							
+						</tr>
+						{%foreachelse%}
+						<tr>
+							<td colspan="12">暂无查询结果</td>
+						</tr>
+						{%/foreach%}
+                        </tbody>
+                    </table>
+                    <div class="pager">{%$page_bar%}</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

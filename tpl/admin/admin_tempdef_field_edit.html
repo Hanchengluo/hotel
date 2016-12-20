@@ -1,0 +1,103 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="http://ria.city.sina.com.cn/s/g=base.js"></script>
+
+<style>
+td {padding-left:5px;}
+</style>
+</head>
+<body>
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+	<a href='tempdef_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}' >新建模板域</a>
+	<a href='tempdef_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&field_id={%$g_show.field_id%}' >修改模板域</a>
+</div>
+<div width='100%' class="platform_error">
+
+</div>
+
+<!-- 修改字段属性  -->
+<div id='field_alter_type'>
+<form id='field_alter_type_form'>
+<input type='hidden' id='project_id' name='project_id' value='{%$g_show.project_id%}' />
+<input type='hidden' id='template_id' name='template_id' value='{%$g_show.template_id%}' />
+<input type='hidden' id='field_id' name='field_id' value='{%$g_show.field_id%}' />
+<table style='width:100%'>
+  <tr align="center">
+    <td width="30%"><b>项目</b></td><td><b>值</b></td>
+  </tr>
+  <tr align="left">
+    <td>绑定数据库字段名称</td><td><input style='width:350px;' type='text' id='field_name' name='field_name' value='{%$g_show.field_info.Field%}' disabled='disabled' ></input></td>
+  </tr>
+  <tr align="left">
+    <td>数据库字段类型</td><td><input style='width:350px;' type='text' id='field_type' name='field_type' value='{%$g_show.field_info.field_type%}' readonly='true'></input></td>
+  </tr>
+  <tr align="left">
+    <td>数据库字段长度(Length)</td><td><input style='width:350px;' type='text' id='field_len' name='field_len' value='{%$g_show.field_info.field_len%}' ></input></td>
+  </tr>
+  <tr align="left">
+    <td>数据库字段控制选项</td>
+    <td>
+    {%if $g_show.field_info.field_type eq 'int'%}
+	    {%if $g_show.field_info.unsigned eq 1%}
+	    	<input type='checkbox' checked='checked' value='1' id='field_unsigned' name='field_unsigned'/> unsigned
+	    {%else if%}
+	    	<input type='checkbox' value='1'  id='field_unsigned' name='field_unsigned'/> unsigned
+	    {%/if%}
+    {%else if%}
+    	非int型字段不能修改 unsigned 属性!<div style='display:none'>
+	    {%if $g_show.field_info.unsigned eq 1%}
+	    	<input type='checkbox' checked='checked' value='1' id='field_unsigned' name='field_unsigned'/> unsigned
+	    {%else if%}
+	    	<input type='checkbox' value='1'  id='field_unsigned' name='field_unsigned'/> unsigned
+	    {%/if%}</div>
+    {%/if%}
+    </td>
+  </tr>
+  <tr align="left">
+    <td></td><td><input type='button' value=' 提 交 ' id="field_alter_type_form_submit" name="field_alter_type_form_submit"/></td>
+  </tr>
+</table>
+</form>
+</div>
+
+<script type='text/javascript'>
+$(function()
+{
+	$("#field_alter_type_form_submit").click(function()
+	{
+		$.post('/admin/platform/tempdef_field_edit_post.php', $("#field_alter_type_form").serialize(), function(data){
+			
+			data = eval( "("+data+")" );
+			
+			if(data.status == 0)
+			{
+				alert("恭喜你修改成功.");
+			}
+			else
+			{
+				alert(data.error);
+			}
+
+			location.reload();
+		});//end post
+	});
+});
+</script>
+
+</body>
+</html>

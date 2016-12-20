@@ -1,0 +1,281 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>使用帮助 --- SASS</title>
+<style type="text/css"> 
+<!-- 
+a:link {
+	text-decoration: none;
+	color: #333333;
+}
+a:visited {
+	text-decoration: none;
+	color: #333333;
+}
+a:hover {
+	text-decoration: none;
+	color: #666666;
+}
+a:active {
+	text-decoration: none;
+	color: #333333;
+}
+body,td,th {
+	font-size: 14px;
+}
+body {
+	background-color: #FDFDFD;
+}
+.Form_mid {
+	background-color: #FFFFFF;
+}
+.Form_head {
+	background-color: #EAF6F8;//#DBEDF5;
+}
+.Search_bar {
+	background-color: #DBF1D4;
+}
+.Result_con {
+	color:#666666;
+	font-size: 12px;
+	background-color: #DFF0E1;
+	padding-left: 5%;
+}
+.Best_an {
+	background-color: #FED6D2;
+}
+.Other_an {
+	background-color: #DBF1D4;
+}
+.Page_area{
+	font-size:12px;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	padding:10px 0px;
+	clear:both;
+}
+.Box_a{
+	color: gray;
+	padding:1px 3px;
+	text-decoration:none;	
+	border: solid 1px #CCCCCC;
+}
+.Box_selected{
+	color: gray;
+	padding:1px 3px;
+	border: solid 1px gray;
+	cursor:crosshair;
+	background:#F5F5F5;
+}
+a:hover.Box_a{
+	background-color:#E8E8FF;
+	border: solid 1px #A8D3FF;
+	text-decoration:none;	
+}
+.Tag{
+	color:#0080FF;
+}
+.Dig{
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: #0099FF;
+	
+}
+.DateTime{
+	font-family:Verdana, Arial;
+	font-size:14px;
+	color:#666666;
+	word-wrap:break-word;
+	table-layout: fixed;
+}
+.Link{
+	color:blue;
+	text-decoration:underline;
+}
+
+input 
+{
+	color:#000000;
+	background-color:#ffffff;
+	border:1px dashed #666666; 
+}
+
+body { line-height: 18pt; } 
+td { line-height: 18pt; } 
+.f12{ font-size:12px; }
+.STYLE1 {font-size: 12px; font-weight: bold; }
+--> 
+</style>
+<script type="text/javascript">
+function go_back()
+{
+	if (window.parent)
+	{
+		window.parent.location.href = "index.php";
+	}
+	else
+	{
+		location.href = "welcome.php";
+	}
+}
+</script>
+</head>
+<body>
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+	<tr>
+		<td height="35" colspan="2" class="Form_head">&nbsp;SASS系统使用方法：<a name="top" id="top"></a></td>
+	</tr>
+	<tr>
+		<td height="40" colspan="2" align="left">
+&nbsp;&nbsp;&nbsp;[<a href="#h1">策略说明</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h2">如何查询被封用户</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h3">如何解封用户</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h4">动作类型说明</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h5">如何查询被封IP</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h6">如何解封IP</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h7">如何根据IP查对应用户ID</a>]<br />
+&nbsp;&nbsp;&nbsp;[<a href="#h8">如何根据用户ID查对应IP</a>]<br />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="2">&nbsp;</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h1" id="h1">策略说明</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top" align="left">
+ID&nbsp;-&nbsp;名称<br />
+--------------------------<br />
+3&nbsp;&nbsp;-&nbsp;badguy<br />
+4&nbsp;&nbsp;-&nbsp;ip_badguy<br />
+11&nbsp;-&nbsp;uid_abl<br />
+12&nbsp;-&nbsp;ip_abl<br />
+21&nbsp;-&nbsp;uid_sbl<br />
+22&nbsp;-&nbsp;ip_sbl<br />
+31&nbsp;-&nbsp;uid_default<br />
+32&nbsp;-&nbsp;ip_default<br />
+41&nbsp;-&nbsp;uid_complaint<br />
+42&nbsp;-&nbsp;ip_complaint<br />
+91&nbsp;-&nbsp;uid_vip<br />
+92&nbsp;-&nbsp;ip_vip<br />
+（注：ID小于等于“30”的即为要被封杀的）<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h2" id="h2">如何查询被封用户</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top">
+1.拥有用户查看查询权限：<br />
+&nbsp;登陆SASS管理系统后，点击左边“用户管理”，<br />
+&nbsp;将用户ID输入到“UID”中，选择动作类型或默认ALL，点击“查询”，<br />
+&nbsp;在查询结果中，“组ID”为小于等于数字“30”的均为被封状态。<br />
+<br />
+2.拥有用户操作日志查看查询权限：<br />
+&nbsp;登陆SASS管理系统后，点击左边“用户操作日志”，<br />
+&nbsp;将用户ID输入到“被操作者UID”中，选择动作类型或默认ALL，点击“查询”，<br />
+&nbsp;在查询结果中，“操作后组ID”为小于等于数字“30”的均为被封状态。<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h3" id="h3">如何解封用户</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top">
+登陆后，点击左边“用户管理”，<br />
+在“UID”中输入要解封的用户ID，可选择动作类型或默认ALL，可以选择对应的策略或默认ALL，点击“查询”，<br />
+在查询结果中，点击对应动作类型的需要解封动作的“编辑”，<br />
+“gid”填写为“31”，点击“提交”，提示编辑成功，即为解封成功。<br />
+（注：解封成功当即生效）<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h4" id="h4">动作类型说明</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top" align="left">
+ID&nbsp;-&nbsp;说明<br />
+--------------------------<br />
+101&nbsp;-&nbsp;blog访客留脚印<br />
+102&nbsp;-&nbsp;blog评论发表<br />
+103&nbsp;-&nbsp;blog文章发表<br />
+104&nbsp;-&nbsp;blog产品开通<br />
+105&nbsp;-&nbsp;space访客<br />
+106&nbsp;-&nbsp;互动平台访客<br />
+107&nbsp;-&nbsp;space留言<br />
+108&nbsp;-&nbsp;blog图片上传<br />
+109&nbsp;-&nbsp;相册图片上传<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h5" id="h5">如何查询被封IP</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top">
+1.拥有IP查看查询权限：<br />
+&nbsp;登陆SASS管理系统后，点击左边“IP管理”，<br />
+&nbsp;将被封IP输入到“IP”中，选择动作类型或默认ALL，点击“查询”，<br />
+&nbsp;在查询结果中，“组ID”为小于等于数字“30”的均为被封状态。<br />
+<br />
+2.拥有IP操作日志查看查询权限：<br />
+&nbsp;登陆SASS管理系统后，点击左边“IP操作日志”，<br />
+&nbsp;将被封IP输入到“被操作IP”中，选择动作类型或默认ALL，点击“查询”，<br />
+&nbsp;在查询结果中，“操作后组ID”为小于等于数字“30”的均为被封状态。<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h6" id="h6">如何解封IP</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top">
+登陆后，点击左边“IP管理”，<br />
+在“IP”中输入要解封的IP，可选择动作类型或默认ALL，可以选择对应的策略或默认ALL，点击“查询”，<br />
+在查询结果中，点击对应动作类型的需要解封动作的“编辑”，<br />
+“gid”填写为“32”，点击“提交”，提示编辑成功，即为解封成功。<br />
+（注：解封成功当即生效）<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h7" id="h7">如何根据IP查对应用户ID</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top">
+登陆后，点击左边“User-IP对照”，<br />
+选择IP，输入要查询的IP，点击“查询”，<br />
+在查询结果中，第一列显示的就是查询的IP，第二列是其对应的用户ID。<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="30" colspan="2" class="Search_bar">&nbsp;<a name="h8" id="h8">如何根据用户ID查对应IP</a> [<a href="#top" title="返回菜单">top</a>] </td>
+	</tr>
+	<tr>
+		<td width="5%">&nbsp;</td>
+		<td width="95%" valign="top">
+登陆后，点击左边“User-IP对照”，<br />
+选择UID，输入要查询的用户ID，点击“查询”，<br />
+在查询结果中，第一列显示的就是查询的用户ID，第二列是其对应的IP。<br />
+<br />
+		</td>
+	</tr>
+	<tr>
+		<td height="35" colspan="2" align="center" class="Form_head"><input name="Back" type="button" id="Back" value=" 返 回 " onclick="go_back()"/></td>
+	</tr>
+</table>
+</body>
+</html>

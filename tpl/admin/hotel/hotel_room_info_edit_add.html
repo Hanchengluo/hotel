@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>后台管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/admin/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery/jquery.js" charset="utf-8"></script>
+<script language="javascript" type="text/javascript" src="/js/hotel/uploader.js"></script>
+<script language="javascript" type="text/javascript" src="/js/hotel/tips.js"></script>
+<script type="text/javascript" src="/admin/js/jquery.form.js" charset="utf-8"></script>
+
+</head>
+<body>
+<div class="main">
+	<div class="title-sp">
+		<h2>添加列表</h2>
+		<span class="l"></span>
+		<span class="r"></span>
+	</div>
+	<div class="table-box">
+		<div class="table-top">
+			<a href="hotel_room_info_list.php" class="button button_a">返回列表</a>
+		</div>
+		<div class="table-data-box">
+			<form id="form1" method="post" enctype="multipart/form-data" action="hotel_room_info_edit_post_add.php">
+				<input type="hidden" value="{%$g_show.item.id%}" name="id" id="id" />
+				<table class="table-add-modify">
+					
+					<!-- <tr>
+						<td class="label">节目列表<span class="require">*</span></td>
+						<td><input type="text" class="text" readonly="readonly" name="room_file_address" id="room_file_address" value="{%$g_show.item.room_file_address%}" /><span class="uploadfile app_link_class"><input type="button" value="浏览" /> </span> &nbsp;
+							<div class="f_c">请上传文件</div>
+						</td>
+					</tr> -->
+              		
+              		<tr>
+						<td class="label">房间号<span class="require">*</span></td>
+						<td><input type=text value="{%$g_show.item.room_num%}" name="room_num" id="room_num" />
+							<div class="f_c">房间号不能冲突！</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td class="label">mac地址<span class="require">*</span></td>
+						<td><input type=text value="{%$g_show.mac[0]%}" name="room_mac_1" id="room_mac_1" style="width:20px;"/> :
+						<input type=text value="{%$g_show.mac[1]%}" name="room_mac_2" id="room_mac_2" style="width:20px;"/> :
+						<input type=text value="{%$g_show.mac[2]%}" name="room_mac_3" id="room_mac_3" style="width:20px;"/> :
+						<input type=text value="{%$g_show.mac[3]%}" name="room_mac_4" id="room_mac_4" style="width:20px;"/> :
+						<input type=text value="{%$g_show.mac[4]%}" name="room_mac_5" id="room_mac_5" style="width:20px;"/> :
+						<input type=text value="{%$g_show.mac[5]%}" name="room_mac_6" id="room_mac_6" style="width:20px;"/>
+						<div class="f_c">mac地址不能冲突！</div>
+						</td>
+					</tr>
+					
+					<tr>
+						<td></td>
+						<td><input type="submit" value="提交" class="button form_submit" /> &nbsp; &nbsp; <input type="reset" value="重置" onclick="reset()" class="button" /></td>
+					</tr>
+					
+					<tr>
+						<td><input type=text value="{%$g_show.item.hotel_room_manager_id%}" name="hotel_room_manager_id" id="hotel_room_manager_id" hidden="true" /></td>
+					</tr>
+					
+					<tr>
+						<td><input type=text value="{%$g_show.item.room_num%}" name="room_num_old" id="room_num_old" hidden="true" /></td>
+					</tr>
+
+            </table>
+			</form>
+		</div>
+    
+		<span class="l"></span>
+		<span class="r"></span>
+	</div>
+</div>
+</body>
+
+<script>
+
+$(".form_submit").bind("click", function () {
+	if(!$("#room_num").val())
+	{
+		alert("房间号不能为空！");
+		return false;
+	}
+	
+	if(!$("#room_mac_1").val() || !$("#room_mac_2").val() || !$("#room_mac_3").val() || !$("#room_mac_4").val() || !$("#room_mac_5").val() || !$("#room_mac_6").val())
+	{
+		alert("mac地址不能为空！");
+		return false;
+	}
+	
+	$("#my_form").submit();
+
+} );
+
+</script>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+
+	模板设计请在SVN中完成 <a href='tempdef_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}' >新建模板域</a>
+</div>
+
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<div >
+<div style='float:left;width:600px'>
+<form method="post">
+<input type="hidden" id="project_id" name="project_id" value="{%$g_show.project_id%}" />
+<input type="hidden" id="template_id" name="template_id" value="{%$g_show.template_id%}" />
+SQL: <br/>
+<textarea id="sql" name="sql" rows="5" cols="80">{%$g_show.sql%}</textarea><br/>
+编译后的SQL: <br/>
+<textarea  rows="5" cols="80" readonly=true>{%$g_show.sql_raw%}</textarea><br/>
+<input value=" 提 交 " type="submit" />
+</form>
+</div>
+<div style='display:inline;float:left;width:400px'>
+帮助：<br/>
+查询：select * from {模板名} order by d_id desc limit 10; <br/>
+添加索引 ： ALTER TABLE {模板名} ADD INDEX {索引名} ({模板域名}) <br/>
+<br/><br/>
+导出数据：<br/>
+UTF-8
+<a href="http://food.henan.sina.com.cn/api/platform/get_data_sql.php?sql={%$g_show._sql%}&project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&user_name={%$g_show.user_name%}&user_passwd={%$g_show.user_passwd%}" target="_blank">TXT</a>
+<a href="http://food.henan.sina.com.cn/api/platform/get_data_sql.php?sql={%$g_show._sql%}&project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&user_name={%$g_show.user_name%}&user_passwd={%$g_show.user_passwd%}&ret_type=json" target="_blank">JSON</a>
+<a href="http://food.henan.sina.com.cn/api/platform/get_data_sql.php?sql={%$g_show._sql%}&project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&user_name={%$g_show.user_name%}&user_passwd={%$g_show.user_passwd%}&ret_type=print" target="_blank">PHP Print</a>
+<br/>
+GBK
+<a href="http://food.henan.sina.com.cn/api/platform/get_data_sql.php?sql={%$g_show._sql%}&project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&user_name={%$g_show.user_name%}&user_passwd={%$g_show.user_passwd%}&encode=gbk" target="_blank">TXT</a>
+<a href="http://food.henan.sina.com.cn/api/platform/get_data_sql.php?sql={%$g_show._sql%}&project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&user_name={%$g_show.user_name%}&user_passwd={%$g_show.user_passwd%}&ret_type=json&encode=gbk" target="_blank">JSON</a>
+
+</div>
+</div>
+<br/>
+
+{%$g_show.list%}	
+
+
+<div class="pages">{%$g_show.page_bar%}</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

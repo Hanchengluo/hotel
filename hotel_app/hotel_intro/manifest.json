@@ -1,0 +1,16 @@
+{
+  "name": "TVos",
+  "version": "1.0",
+  "description":"内蒙古版本的应用平台，最酷炫的操作界面，最友好的操作体验，机顶盒最佳应用平台。<br/>更新：<br/>1,频道管理功能<br/>2,cable ad 接收", 
+  "permissions": [
+    "<all_urls>"
+  ],
+	"icons":{
+			"128":"icon.png",
+		    "32":"icon.png",
+		    "48":"icon.png"
+		},
+   "start_url": "index.html",
+
+  "manifest_version": 2
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_delete(pid)
+{
+	if (!confirm("确认删除策略" + name + "(" + gid + ")！"))
+	{
+		return false;
+	}
+	
+	
+    var postData = [];
+    postData.push("gid=" + gid); 
+		
+    SetAjax("policy_del_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("删除成功！");
+            location.reload();
+        }       
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+</script>
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+	 <a href='document_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}' >新建文档</a>
+</div>
+
+<form action='' method='get'>
+	<input type='hidden' id='project_id' name='project_id' value='{%$g_show.project_id%}'/>
+	<input type='hidden' id='template_id' name='template_id' value='{%$g_show.template_id%}'/>
+
+	<div id='filter_item' style='display:inline'>
+		<select id='filter' name='filter'>
+		{%$g_show.filter%}
+
+		
+		</select>
+		<select id='filter_eq' name='filter_eq'>
+			{%$g_show.filter_eq%} 
+		</select>
+		
+		<input type='text' id='filter_value' name='filter_value' value='{%$g_show.filter_value%}' />
+	</div>
+	
+	<input type='submit' value=' 提　交 '>
+</form>
+
+<div width='100%' class="platform_error">
+
+</div>
+
+
+<div class="pages">{%$g_show.page_bar%}<form method='get' style='display:inline'>转到<input type="text" size=2 class="pager-inp" name="p" />页 <input type='submit' class="pager-bg" value="提 交" />
+<input type='hidden' id='filter' name='filter' value='{%$g_show.filter_get%}'/>
+<input type='hidden' id='filter_eq' name='filter_eq' value='{%$g_show.filter_eq_get%}'/>
+<input type='hidden' id='filter_value' name='filter_value' value='{%$g_show.filter_value%}'/>
+<input type='hidden' id='project_id' name='project_id' value='{%$g_show.project_id%}'/>
+<input type='hidden' id='template_id' name='template_id' value='{%$g_show.template_id%}'/>
+</form></div>
+
+<table style='width:100%'>
+  <tr align="center">
+    <td><b>文档ID</b></td><td><b>预览地址</b></td>
+    {%$g_show.list_t%}
+    <td><b>作者</b></td>
+    <td><b>更新时间</b></td>
+    <td><b>状态</b></td>
+</tr>
+{%section name=count loop=$g_show.list%}
+<TR>
+	<TD align='center'><a href='document_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&d_id={%$g_show.list[count].d_id%}'>{%$g_show.list[count].d_id%}</a></TD>
+	<TD align='center'><a href='/platform/index.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}&d_id={%$g_show.list[count].d_id%}' target="_blank">预览</a></TD>
+	{%$g_show.list[count].html%}
+	<TD align='center'>	{%$g_show.list[count].user_name%}</TD>
+	<TD align='center'>	{%$g_show.list[count].update_time%}</TD>
+	<TD align='center'>	{%$g_show.list[count].status%}</TD>
+</TR>
+{%/section%}
+</table>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

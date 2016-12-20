@@ -1,0 +1,314 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>后台管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="/css/admin/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery/jquery.js" charset="utf-8"></script>
+<script language="javascript" type="text/javascript" src="/js/hotel/uploader.js"></script>
+<script language="javascript" type="text/javascript" src="/js/hotel/uploader2.js"></script>
+<script language="javascript" type="text/javascript" src="/js/hotel/tips.js"></script>
+<script language="javascript" type="text/javascript" src="/js/hotel/tips2.js"></script>
+<script type="text/javascript" src="/admin/js/jquery.form.js" charset="utf-8"></script>
+
+</head>
+
+<div class="main">
+	<div class="title-sp">
+		<h2>添加视频</h2>
+		<span class="l"></span>
+		<span class="r"></span>
+    </div>
+    <div class="table-box">
+    	<div class="table-top">
+				<a href="hotel_video_detail_list.php" class="button button_a">返回视频</a>
+      </div>
+    	<div class="table-data-box">
+				<form id="my_form" method="post" enctype="multipart/form-data" action="hotel_video_detail_edit_post.php">
+        	<table class="table-add-modify">
+						<tr>
+							<td class="label">视频分类<span class="require">*</span></td>
+							<td>
+								<select name="video_category" id="video_category">
+									<option>请选择</option>
+									{%section name=count loop=$g_show.type_list%}
+										<option value="{%$g_show.type_list[count].id%}">{%$g_show.type_list[count].video_category_name%}</option>
+									{%/section%}
+								</select>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="label">视频名称<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_name%}" name="video_name" id="video_name" /></td>
+						</tr>
+						
+						<tr>
+							<td>缩略图<span class="require">*</span></td>
+							<td><input type="text" class="text" readonly="readonly" name="video_thumbnail_address" id="video_thumbnail_address" value="{%$g_show.item.video_thumbnail_address%}" /><span class="uploadfile app_pic_class"><input type="button" value="浏览" /> </span> &nbsp;<!--  (上传125*125像素图片) -->
+								<div class="f_c">最大允许3M，允许上传图片的类型：gif jpg jpeg png</div>
+								<br>
+								<div id="pic_view">
+									{%if $g_show.item.video_thumbnail_address%}
+										<img  src="{%$g_show.item.video_thumbnail_address%}">
+									{%/if%}
+								</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td>视频简介<span class="require">*</span></td>
+							<td><textarea rows="10" cols="30" value="{%$g_show.item.video_introduction%}" name="video_introduction" id="video_introduction"></textarea></td>
+						</tr>
+
+<!-- 						<tr>
+							<td class="label">视频url<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_url%}" name="video_url" id="video_url" /></td>
+						</tr> -->
+						
+						<tr>
+							<td>视频url<span class="require">*</span></td>
+							<td><input type="text" class="text" readonly="readonly" name="video_url" id="video_url" value="{%$g_show.item.video_url%}" /><span class="uploadfile app_link_class"><input type="button" value="浏览" /> </span> &nbsp;
+								<div class="f_c">请上传视频文件</div>
+							</td>
+						</tr>
+						
+						<tr>
+							<td class="label">单片点播价格<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_price_single%}" name="video_price_single" id="video_price_single" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">评分<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_rating%}" name="video_rating" id="video_rating" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">影片地区<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_area%}" name="video_area" id="video_area" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">上线时间<span class="require">*</span></td>
+							<td><input type=date value="{%$g_show.item.video_online_time%}" name="video_online_time" id="video_online_time" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">片长时间<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_duration%}" name="video_duration" id="video_duration" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">导演名<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_director%}" name="video_director" id="video_director" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">主演名<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_star%}" name="video_star" id="video_star" /></td>
+						</tr>
+						
+						<tr>
+							<td class="label">包天点播价格<span class="require">*</span></td>
+							<td><input type=text value="{%$g_show.item.video_price_one_day%}" name="video_price_one_day" id="video_price_one_day" /></td>
+						</tr>
+						
+						<input type="hidden" name="id" value={%$g_show.item.id%}>
+							<tr>
+								<td></td>
+								<td><input type="button" value="提交" class="button form_submit" /> &nbsp; &nbsp; <input type="reset" value="重置" onclick="reset()" class="button" /></td>
+							</tr>
+            </table>
+				</form>
+			</div>
+    
+			<span class="l"></span>
+			<span class="r"></span>
+		</div>
+</div>
+
+
+
+<script type="text/javascript">
+
+$("#video_introduction").html('{%$g_show.item.video_introduction%}');
+
+$(function(){
+	options={
+		callback:'/js/uploader_callback.html',
+		container:'.app_pic_class',
+		script:'/interface/common/json_pic_upload.php',
+		size:"188|188",
+		thumb:1,
+		onComplete:function(res){
+				if(res.error ==0)
+				{
+					if(res.pic)
+					{
+						$("#video_thumbnail_address").val(res.pic);
+						$("#pic_view").html("<img src='"+res.pic+"'>")
+						return ;
+					}
+				}
+				else
+				{
+					alert(res.errormsg);
+				}
+			
+				},
+		errorId:'#errormsg'
+	};
+	TV.ImgUploader.init(options);
+
+});
+
+
+$(function(){
+	
+	options={
+		callback:'/js/uploader_callback2.html',
+		container:'.app_link_class',
+		script:'/interface/common/json_file_upload.php',
+		onComplete:function(res){
+			if(res.error ==0)
+			{
+			
+				if(res.link)
+				{
+					$("#video_url").val(res.link);
+
+					return ;
+				}
+				
+			}
+			else
+			{
+				alert(res.errormsg);
+			}
+				
+		},
+		errorId:'#errormsg'
+	};
+
+	TV2.ImgUploader.init(options);
+
+});
+
+
+</script>
+
+<script>
+
+$("#video_category").find("option[value='{%$g_show.item.video_category_id%}']").attr("selected",true);
+
+$(".form_submit").bind("click", function () {
+	
+	if($("#video_category").val() == '请选择')
+	{
+		alert("视频分类不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_name").val())
+	{
+		alert("视频名称不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_thumbnail_address").val())
+	{
+		alert("缩略图不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_introduction").val())
+	{
+		alert("视频简介不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_url").val())
+	{
+		alert("视频url不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_price_single").val())
+	{
+		alert("单片点播价格不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_price_single").val().match(/^[0-9].*$/))
+	{
+		alert("单片点播价格只能为数字！");
+		return false;
+	}
+	
+	if(!$("#video_rating").val())
+	{
+		alert("评分不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_rating").val().match(/^[0-9].*$/))
+	{
+		alert("评分只能为数字！");
+		return false;
+	}
+	
+	if(!$("#video_area").val())
+	{
+		alert("影片地区不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_online_time").val())
+	{
+		alert("上线时间不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_duration").val())
+	{
+		alert("片长时间不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_duration").val().match(/^[0-9].*$/))
+	{
+		alert("片长时间只能为数字！");
+		return false;
+	}
+	
+	if(!$("#video_director").val())
+	{
+		alert("导演名不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_star").val())
+	{
+		alert("主演名不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_price_one_day").val())
+	{
+		alert("包天点播价格不能为空！");
+		return false;
+	}
+	
+	if(!$("#video_price_one_day").val().match(/^[0-9].*$/))
+	{
+		alert("包天点播价格只能为数字！");
+		return false;
+	}
+	
+	$("#my_form").submit();
+
+} );
+
+</script>
+
+</html>

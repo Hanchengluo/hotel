@@ -1,0 +1,89 @@
+
+<!-- saved from url=(0094)http://182.92.156.224:8088/smart_file/sys_file/hotel/31/static/vod/lang_zh/detail_single_3.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>单片详情页</title>
+
+<script language="javascript" src="./sbory.js"></script>
+<!--<script language="javascript" src="./movie.js"></script>-->
+<script language="javascript" src="./movie_detail.js"></script>
+
+</head>
+<body topmargin="0" leftmargin="0" style="background:url(images/detail_bg.jpg) no-repeat;">
+<img src="./detail_single_files/detail_icon_bg.png" style="position:absolute; top:66px; left:75px;">
+<img id="bigIcon" src="" style="position:absolute; top:76px; left:89px;" width="349" height="497">
+<div style="position:absolute; top:605px; left:88px; width:351px; height:44px; line-height:44px; font-size:30px;" align="center"><span style="color:#ffc000;">点播价格：</span><span id="price" style="color:#FFFFFF;">5元</span></div>
+
+<div id="vodName" style="position:absolute; top:70px; left:525px; width:517px; height:55px; line-height:55px; font-size:43px; color:#a5a4a4;"></div>
+<div id="star" style="position:absolute; top:86px; left:1013px; width:184px; height:30px;" align="right"><img src="./detail_single_files/vod_star0.png"> <img src="./detail_single_files/vod_star0.png"> <img src="./detail_single_files/vod_star0.png"> <img src="./detail_single_files/vod_star0.png"> <img src="./detail_single_files/vod_star1.png"> </div>
+<div id="score" style="position:absolute; top:59px; left:1135px; width:62px; height:25px; font-size:22px; color:#a5a4a4;"></div>
+
+<table width="675" height="414" cellpadding="0" cellspacing="0" style="position:absolute; top:130px; left:531px; font-size:25px; color:#FFFFFF; width: 667px;">
+	<tbody><tr>
+		<td width="130" height="40" style="color:#ffc000;">地区：</td>
+		<td width="545" id="vodArea"></td>
+	</tr>
+	<tr>
+		<td height="40" style="color:#ffc000;">时间：</td>
+		<td id="vodTime"></td>
+	</tr>
+	<tr>
+		<td height="40" style="color:#ffc000;">片长：</td>
+		<td id="vodDuration"></td>
+	</tr>
+	<tr>
+		<td height="40" style="color:#ffc000;">导演：</td>
+		<td id="vodDirector"></td>
+	</tr>
+	<tr>
+		<td height="80" style="color:#ffc000;">主演：</td>
+		<td id="vodActor"></td>
+	</tr>
+	<tr>
+		<td style="color:#ffc000;" height="35" colspan="2">剧情介绍：</td>
+	</tr>
+	<tr>
+		<td colspan="2" id="vodDesc"></td>
+	</tr>
+
+</tbody></table>
+
+<div id="bnt0" style="position: absolute; top: 599px; left: 531px; width: 189px; height: 55px; line-height: 55px; font-size: 27px; color: rgb(255, 255, 255); text-align: center; background: url(&quot;images/vod_bnt1.png&quot;) no-repeat;">影片详情</div>
+<div id="bnt1" style="position:absolute; top:599px; left:769px; width:189px; height:55px; background:url(images/vod_bnt0.png) no-repeat; line-height:55px; font-size:27px; color:#626262; text-align:center;">点　播</div>
+<div id="bnt2" style="position:absolute; top:599px; left:1010px; width:189px; height:55px; background:url(images/vod_bnt0.png) no-repeat; line-height:55px; font-size:27px; color:#626262; text-align:center;">返　回</div>
+
+<table id="buyNote" width="766" height="491" cellpadding="0" cellspacing="0" style="position:absolute; top:97px; left:309px; background:url(images/vod_note_bg.png) no-repeat; font-size:23px; color:#FFFFFF;display:none"><!--display:none-->
+	<tbody><tr>
+		<td width="83" rowspan="6"></td>
+		<td height="50" colspan="3"></td>
+		<td width="83" rowspan="6"></td>
+	</tr>
+	<tr>
+		<td height="105" colspan="3" align="center" style="font-size:35px; color:#ffb400;">温馨提示</td>
+	</tr>
+	<tr>
+		<td height="129" colspan="3"><span id="noteVodInfo">此影片是付费点播影片，您确认点播？</span><br>点播价格：<span id="noteVodPrice">&nbsp;</span><br><span id="vodValidTime">&nbsp;</span><span id="noteVodInfo1">小时内可无限制播放。</span></td>
+	</tr>
+	<tr>
+		<td colspan="3" style="font-size:25px;"><span style="color:#ffb400;">推荐</span>  <span id="allDayPrice">&nbsp;</span>元/天包天点播，可播放所有影片</td>
+	</tr>
+	<tr>
+		<td width="196" height="70" align="center" style="background:url(images/vod_note_bnt0.png) no-repeat center; color:#626262;" id="noteBnt0">确认点播</td>
+	    <td width="210" align="center" style="background:url(images/vod_note_bnt0.png) no-repeat center; color:#626262;" id="noteBnt1">包天点播</td>
+	    <td width="192" align="center" style="background:url(images/vod_note_bnt0.png) no-repeat center; color:#626262;" id="noteBnt2">返　回</td>
+	</tr>
+	<tr>
+		<td height="60" colspan="3"></td>
+	</tr>
+</tbody></table>
+
+<table id="currNoteArea" style="position:absolute; top:220px; left:280px; width:719px; height:280px; background:url(images/note_info_bg.png) no-repeat; font-size:30px; color:#FFFFFF;display:none">
+	<tbody><tr>
+		<td height="280" width="50"></td>
+		<td align="center" id="curr_note_info">&nbsp;</td>
+		<td width="50"></td>
+	</tr>
+</tbody></table>
+
+
+
+</body></html>

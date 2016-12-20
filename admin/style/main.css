@@ -1,0 +1,82 @@
+*{
+		font-size:12px;
+}
+body
+{
+	margin:2px;
+}
+table 
+{ 
+	border-top:1px solid #97B5BF; 
+	border-right:1px solid #97B5BF; 
+	border-collapse:collapse; 
+} 
+
+td 
+{ 
+	border-bottom:1px solid #97B5BF; 
+	border-left:1px solid #97B5BF; 
+	padding:2px; 
+} 
+
+textarea
+{
+	border:1px solid #666666; 
+
+}
+
+input 
+{
+	color:#000000;
+	background-color:#ffffff;
+	border:1px dashed #666666; 
+}
+
+select 
+{
+	color:#000000;
+	background-color:#ffffff;
+	border:1px dashed #666666; 
+}
+
+.pages{text-align:right; clear:both; margin-top:10px; margin-bottom:10px; }
+.pages a{ padding:3px 4px; margin:0 0 0 4px; border:1px solid #ccc; background-color:#fff; }
+.pages a:link,
+.pages a:visited{ color:#646E7C; text-decoration:none;}
+.pages a:hover{color:#c00;}
+.pages a.pNum{ border-top:1px solid #e6e6e6; border-left:1px solid #e6e6e6;border-right:1px solid #c1c1c1; border-bottom:1px solid #c1c1c1; padding:0;}
+.pages a.pNum em{ font-style:normal; display:block; border:1px solid #fff; padding:1px 4px 2px 4px; background:url(images/bg_btn_pages.png) repeat-x left bottom;}
+.pages span{ line-height:24px;margin:0 0 0 4px;}
+
+
+.nav {
+	background-color:#97B5BF; 
+	text-align:left;
+	margin-bottom:5px;
+	}
+.platform_toolbar_main {
+	border:1px solid;
+	padding:2px;
+	margin-bottom:5px;
+	text-align:right;
+	}
+.platform_toolbar_child {
+	margin-bottom:5px;
+	text-align:left;
+	}
+	
+.l-blk06{}
+.l-blk06 li{border-bottom:1px dashed #e2e2e2;}
+.l-b06-text01{line-height:18px;}
+.l-b06-text02{line-height:22px; margin-top:10px;}
+.l-b06-text03{vertical-align:middle; margin-right:5px;}
+.l-b06-text04{line-height:24px;}
+.l-blk06 .l-b06-p01{overflow:hidden; display:block; clear:both; height:100%; padding:10px 10px 0 10px;}
+.l-b06-p01 .l-b06-p01-l{float:left; width:56px;}
+.l-b06-p01 .l-b06-p01-l img{border:1px solid #c7c7c5; padding:2px;}
+.l-b06-p01 .l-b06-p01-l p{text-align:center; font-weight:bold; line-height:26px;}
+.l-b06-p01 .l-b06-p01-r{float:right; width:602px;}
+.l-blk06 .l-b06-p02{background-color:#f4f4f4; overflow:hidden; display:block; clear:both; height:100%; padding:4px 10px 9px 10px;}
+.l-b06-p02 .l-b06-p02-l{float:left; width:89px;}
+.l-b06-p02 .l-b06-p02-r{float:right; width:569px;}
+.l-b06-p03{padding:1px 10px 9px 0}

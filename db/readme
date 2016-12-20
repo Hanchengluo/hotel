@@ -1,0 +1,5 @@
+admin		sdpandsdp
+vvb			VVBridge
+
+
+ad_vvb_20140701_liter.sql	去除了admin_priv这个表里更多的没用的信息。

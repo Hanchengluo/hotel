@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+	模板设计请在SVN中完成 <a href='document_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}' >新建文档</a>
+</div>
+
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<form action="/platform/document_submit.php" method="post" id="doc_submit" name="doc_submit" target="iframe_data">
+<input type="hidden" id="__user_name" name="__user_name" value="{%$g_show.user_name%}" />
+<input type="hidden" id="__user_passwd" name="__user_passwd" value="{%$g_show.user_passwd%}" />
+<input type="hidden" id="__project_id" name="__project_id" value="{%$g_show.project_id%}" />
+<input type="hidden" id="__d_id" name="__d_id" value="{%$g_show.d_id%}" />
+<input type="hidden" id="__template_id" name="__template_id" value="{%$g_show.template_id%}" />
+<input type="hidden" id="__ds_type" name="__ds_type" value="form_post" />
+<input type="hidden" id="__ret_url" name="__ret_url" value="{%$g_show.ret_url%}" />
+
+<table style='width:100%'>
+  <tr align="center">
+    <td><b>项目</b></td><td><b>值</b></td>
+</tr>
+{%$g_show.list%}	
+</table>
+</form>
+<iframe style='display:none' id='iframe_data' name='iframe_data' src='' />
+<div class="pages">{%$g_show.page_bar%}</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

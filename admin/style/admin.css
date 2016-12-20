@@ -1,0 +1,52 @@
+/**
+ * @author ruixia@staff.sina.com.cn
+ * @date 2010-12-29
+*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{margin:0;padding:0;}
+body{font-family:"宋体";font-size:12px;}
+table{border-collapse:collapse}
+h2{font-size:18px;}
+h3{font-size:14px;}
+li{list-style:none;}
+em,i{font-style:normal;}
+img{border:none;}
+a{text-decoration:none; color:#0048ff;}
+a:hover{color:#f00}
+.fl{float:left;}
+.fr{float:right;}
+.tc{text-align:center}
+.clear{clear:both; overflow:hidden;}
+.title{background:#e6eff9;line-height:29px;margin:15px 0 0;padding:0 0 0 10px;}
+.title i{margin:0 6px;}
+.title a{color:#000;}
+.title a:hover{color:#f00;text-decoration:underline}
+.text,.form textarea{border:1px solid #ccc;font-size:12px;height:15px;padding:3px 0 0 5px;width:300px;margin:0 5px 0 0}
+.form textarea{height:80px;vertical-align:top}
+.tip{border:1px dashed #ccc;text-align:center;line-height:40px;margin:15px 10px 0;font-size:14px;font-weight:bold;background:#fdffdc;}
+.w10{margin:15px 10px 0;}
+.table{width:100%;line-height:25px;text-align:center}
+.table th{background:#446995;color:#fff;border:1px solid #fff}
+.table td{border:1px solid #fff}
+.table .cur{background:#e9e9e9}
+.table a{margin:0 3px;}
+.form label{width:128px;padding:0 8px 0 0;float:left;text-align:right;margin:3px 0 0}
+.form label.m0{margin:0}
+.form p{margin:10px 0 0}
+.form .sl{width:130px;margin:0 5px 0 0}
+.flick h3{background:url(/images/mblog/bgxadmin.gif) repeat-x;line-height:29px;padding:0 0 0 10px;}
+.btn,.table th a{background:url(/images/mblog/bgadmin.gif) no-repeat;}
+.btn{width:74px;height:19px;border:none;cursor:pointer;margin:10px;}
+.flick{border:5px solid #446995;position:absolute;top:40%;left:50%;margin-left:-186px;z-index:999}
+.flick .in{border:1px solid #a0a0a0;background:#fff;width:360px;padding:1px 1px 10px;line-height:22px;}
+.flick .delete{margin:10px 20px 0}
+body{_height:100%}
+#mask{position:fixed;_position:absolute;top:0;left:0;width:100%;height:100%;z-index:998;background:#240000;filter:alpha(opacity=60);-moz-opacity: 0.60;opacity: 0.60;overflow:auto}
+.table th a{color:#fff;margin:0;padding:0 12px 0 0;cursor:pointer}
+.table th a.up{background-position:right -27px;}
+.table th a.down{background-position:right 3px;}
+.flick .form .text,.flick .form textarea{width:200px}
+.flick .form label{width:70px;}
+.form .kword{margin:0 0 0 131px;width:315px}
+.kword a{display:inline-block;line-height:19px;padding:0 7px;border:1px solid #ccc;margin:10px 5px 0;background:#FDFFDC;color:#000;cursor:pointer;}
+
+

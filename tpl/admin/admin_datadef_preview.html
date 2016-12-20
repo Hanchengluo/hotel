@@ -1,0 +1,16 @@
+<meta http-equiv="Content-Type" content="text/html;  charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+
+<div style='display:inline;float:left;width:800px'>
+<br><br>
+{%if $smarty.get.cache%}
+<a href="datadef_preview.php?project_id={%$smarty.get.project_id%}&template_id={%$smarty.get.template_id%}&data_id={%$smarty.get.data_id%}">查看即时数据</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="datadef_preview.php?project_id={%$smarty.get.project_id%}&template_id={%$smarty.get.template_id%}&data_id={%$smarty.get.data_id%}&delete_cache">清除MC数据</a><br/>
+{%else%}
+<a href="datadef_preview.php?project_id={%$smarty.get.project_id%}&template_id={%$smarty.get.template_id%}&data_id={%$smarty.get.data_id%}&cache=1">查看MC数据</a><br/>
+{%/if%}
+<br>
+</div>
+</div>
+<br/>
+
+{%$g_show.list%}

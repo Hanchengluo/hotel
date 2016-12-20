@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_submit()
+{
+
+	var project_id = $("project_id").value;
+	var template_id = $("template_id").value;
+	var template_name = $("template_name").value;
+	var template_info = $("template_info").value;
+	var template_path = $("template_path").value;
+	var template_content_type = $("template_content_type").value;
+	var status = $("status").value;
+	
+    var postData = [];
+    postData.push("project_id=" + project_id);
+    postData.push("template_id=" + template_id); 
+    postData.push("template_name=" + template_name); 
+    postData.push("template_info=" + template_info); 
+    postData.push("template_path=" + template_path); 
+    postData.push("template_content_type=" + template_content_type); 
+    postData.push("status=" + status); 
+    
+    SetAjax("template_edit_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("更新成功！");
+            location.reload();
+        }       
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+</script>
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+模板设计请在SVN中完成
+</div>
+
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<table style='width:100%'>
+  <tr align="center">
+    <td><b>项目</b></td><td><b>值</b></td>
+    {%$g_show.list%}	
+  </tr>
+
+</table>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

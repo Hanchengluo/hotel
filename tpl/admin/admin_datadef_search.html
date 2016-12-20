@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>数据域转db类</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_delete(name,project_id,data_id,status)
+{
+	if (status==0 && !confirm("确认停用数据域：" + name + "(" + data_id + ")！"))
+	{
+		return false;
+	}
+	
+	
+    var postData = [];
+    postData.push("project_id=" + project_id); 
+    postData.push("data_id=" + data_id); 
+    postData.push("status=" + status); 
+		
+    SetAjax("datadef_change_status_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+            if(status == 0)
+        		alert("数据域已停用！");
+            else
+            	alert("数据域已启用！");
+            location.reload();
+        }       
+        else
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+</script>
+<br/>
+<form action="" method='get'>
+关键词：<input type='text' id='word' name='word' value='{%$g_show.word%}' size="100"/>
+<input type='submit' value=' 提 交 ' />
+</form>
+<br/>
+共 {%$g_show.count%} 条记录
+<table style='width:100%'>
+  <tr align="center">
+    <td width="5%"><b>project_id</b></td>
+    <td width="5%"><b>template_id</b></td>
+	<td width="5%"><b>data_id</b></td>
+	<td width="5%"><b>data_type</b></td>
+    <td><b>SQL</b></td>
+    <td width="5%"><b>作者</b></td>
+    <td width="5%"><b>状态</b></td>
+
+</tr>
+{%$g_show.list%}	
+</table>
+<br/><br/>
+<textarea style='width:900px;height:500px'>
+
+{%$g_show.code%}
+
+</textarea>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

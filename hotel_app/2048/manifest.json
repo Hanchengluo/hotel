@@ -1,0 +1,23 @@
+{
+  "name": "2048",
+  "version": "1.0",
+  "description":"比较流行的一款数字游戏", 
+  "permissions": [
+    "webstore", 
+    "device",
+    "management",
+    "dvb",
+    "socket",
+    "alarms",
+    "file",
+    "pushmessage",
+    "<all_urls>"
+  ],
+	"icons":{
+			"128":"icon.png",
+		    "32":"icon.png",
+		    "48":"icon.png"
+		},
+
+  "manifest_version": 2
+}

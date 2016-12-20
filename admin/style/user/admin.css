@@ -1,0 +1,295 @@
+/**
+ * 个人中心管理后台样式
+ * @author 			liushuai@staff.sina.com.cn
+ * @date			2010-04-22
+ * @version			1.0
+ * @copyright		DFZ - SINA
+ * @code-encode 	utf-8
+*/
+
+/*==样式重置 begin==*/
+body,ul,ol,li,p,h1,h2,h3,h4,h5,h6,form,fieldset,table,td,img,div,dl,dt,dd{margin:0;padding:0;}
+body{font-family:Verdana,"宋体", Geneva, sans-serif;font-size:12px;}
+h1,h2,h3,h4,h5,h6,strong{font-weight:700;}
+h2{font-size:18px;}
+h3{font-size:14px;}
+ul,ol,li,dl,dt,dd{overflow:hidden;}
+li{list-style:none;}
+em{font-style:normal;}
+img{border:none;}
+a{text-decoration:none; color:#000;}
+a:hover{color:#f00 !important;}
+/*==样式重置 end==*/
+
+
+
+/*==common begin==*/
+.float-l{float:left;}
+.float-r{float:right;}
+
+.clear{clear:both; overflow:hidden; height:0;}
+	.clear-l{clear:left;}
+	.clear-r{clear:right;}
+
+.space-v{height:10px; width:1px; clear:both; overflow:hidden;}
+.space-h{width:10px; height:1px; float:left;overflow:hidden;}
+
+.no-margin{margin:0 !important;}
+	.no-margin-l{margin-left:0 !important;}
+	.no-margin-r{margin-right:0 !important;}
+	.no-margin-t{margin-top:0 !important;}
+	.no-margin-b{margin-bottom:0 !important;}
+	
+.no-padding{padding:0 !important;}
+	.no-padding-left{padding-left:0 !important;}
+	.no-padding-right{padding-right:0 !important;}
+	.no-padding-top{padding-top:0 !important;}
+	.no-padding-bottom{padding-bottom:0 !important;}
+/*==common end==*/
+
+
+/*==页头样式 begin==*/
+.header{position:relative; width:100%; height:87px; background:#c3dbf4; border-top:8px solid #446995; overflow:hidden;}
+	.header h1{position:absolute; left:183px; top:28px; font-family:"微软雅黑"; font-size:28px; font-weight:normal; width:375px; height:28px; line-height:28px;}
+	
+	.header .logo{float:left; display:inline; width:139px; height:56px; margin:6px 0px 0px 23px;}
+		.header .logo a{position:relative; float:left; width:139px; height:56px;}
+			.header .logo a span{position:absolute; width:139px; height:56px; left:0; top:0; background:url(/admin/images/user/bg.gif) no-repeat -139px -250px scroll;}
+	
+	.header .extra-info{float:right; display:inline; margin:50px 20px 0px 0px;}
+		.header .extra-info .user-name,
+		.header .extra-info .logout{float:left;}
+		
+		.header .extra-info .user-name{font-size:12px; margin-right:20px; height:25px; line-height:25px;}
+		
+		
+			.header .extra-info .logout a{position:relative; float:left; width:67px; height:25px; background:url(/admin/images/user/bg.gif) no-repeat 0 -250px scroll; line-height:25px; text-align:center;}
+
+/*==页头样式 end==*/
+
+
+/*==登录页样式 begin==*/
+.login{position:relative; width:480px; height:248px; margin:102px auto 0px; overflow:hidden; background:url(/admin/images/user/bg.gif) no-repeat 0 0 scroll;}
+	.login h3{height:40px; line-height:40px; text-align:center; font-size:14px; }
+	
+	.login table{width:100%; table-layout:auto; text-align:left; margin-top:13px;}
+		.login table label{text-align:right; float:right; font-size:14px;}
+		.login table .tips{float:left; text-align:left; margin-left:10px; color:#999;}
+		.login table .banner-btn{width:100%; text-align:center; margin:28px auto;}
+			.login table .banner-btn a.forgetpass{margin:0 22px; font-size:14px;}
+			
+			.login table .banner-btn input#form_login_submit{width:72px; height:27px; margin:0 22px;  border:none; background:url(/admin/images/user/bg.gif) no-repeat -67px -250px scroll; color:#fff; cursor:pointer;}
+	
+	.login table .col-label{width:104px;}
+	.login table .col-input{width:248px;}
+	.login table .col-tips{width:128px;}
+	
+	.login input#username,
+	.login input#passwd{width:248px; height:22px; line-height:22px; border:1px solid #808080; margin:11px 0;}
+/*==登录页样式 end==*/
+
+
+/*==首页样式 begin==*/
+/*===左侧菜单样式 begin===*/
+.menu{position:relative; margin-top:-12px; width:151px; margin-left:3px; overflow:hidden; display:inline; float:left;}
+	.menu .menu-top{width:151px; height:25px; background:url(/admin/images/user/bg.gif) no-repeat -280px -269px scroll; clear:both;}
+	.menu .menu-body{width:148px; border-width:0 1px; border-style:solid; border-color:#d6d6d6; float:left;}
+		.menu .menu-body .inner{width:146px; margin:0 1px; background:#ebebeb;}
+	.menu .border-right{width:1px; float:left; background:#bad8f1;}
+	
+			.menu .menu-body .inner ul li{width:126px; margin-left:10px;}
+				.menu .menu-body .inner ul li a{position:relative; display:block; padding-left:26px; width:100px; height:25px; line-height:25px; font-size:12px; font-weight:bold; color:#333; background:url(/admin/images/user/bg.gif) no-repeat 0 -290px scroll;}
+					.menu .menu-body .inner ul li a span{position:absolute; width:9px; height:9px; left:8px; top:8px; background:url(/admin/images/user/bg.gif) no-repeat -280px -295px scroll;}
+					
+				.menu .menu-body .inner ul li ul li{width:110px; margin-left:16px; white-space:nowrap; overflow:hidden; height:31px; line-height:31px;}
+					.menu .menu-body .inner ul li ul li a{position:relative; float:left; width:88px; padding:3px 0 3px 22px; width:88px; font-weight:normal; color:#666; background:none; overflow:hidden;}
+						.menu .menu-body .inner ul li ul li a span{position:absolute; width:5px; height:5px; left:7px; top:14px; background:url(/admin/images/user/bg.gif) no-repeat -295px -295px scroll;}
+/*===左侧菜单样式 end===*/
+
+/*===主区域样式 begin===*/
+.main{overflow:hidden;}
+/*===主区域样式 end===*/
+/*==首页样式 end==*/
+
+
+/*==详细页样式 begin==*/
+#container{overflow:hidden;}
+/*===详细页公共样式 begin===*/
+.wrap a{color:#0048ff;}
+
+input,textarea,select{font-family:Arial, "宋体";}
+
+.icon-notice{position:absolute; width:16px; height:15px; background:url(/admin/images/user/bg.gif) no-repeat -320px -295px scroll;}
+.icon-tips{position:absolute; width:18px; height:18px; background:url(/admin/images/user/bg.gif) no-repeat -350px -295px scroll;}
+
+/*====通用表格样式====*/
+.table-list{margin:20px 0; width:100%;}
+	.table-list th,
+	.table-list td{height:25px; line-height:25px; text-align:center; border-right:1px solid #fff; background:#e9e9e9;}
+	.table-list th{background:#446995; color:#fff !important;text-align:center !important;}
+		.table-list th a{color:#ff0;}
+	
+	.table-list .align-left{text-align:left; float:left; margin-left:10px; display:inline;}
+	.table-list .gray{color:#999;}
+	
+	.table-list .points-add{color:#f00}
+	.table-list .points-minus{color:#1a0}
+	.table-list .points-normal{color:#666;}
+	
+		.table-list tr.odd td{background:#fff;}
+
+/*====a模拟按钮样式====*/
+.a-btn{position:relative; display:block; margin-right:4px; background:url(/admin/images/user/bg.gif) no-repeat -280px -250px scroll; width:113px; height:19px; line-height:19px; text-align:center; text-indent:4px; color:#000 !important;}
+	.a-btn span{position:absolute; width:4px; height:19px; background:url(/admin/images/user/bg.gif) no-repeat right -269px scroll; right:-4px; top:0;}
+
+/*====输入元素外框样式====*/
+input[type=text],
+input[type=password],
+select,
+textarea{border:1px solid #e5e5e5;}
+
+/*====翻页样式====*/
+.pager{float:right; color:#808080;}
+	.pager a{color:#808080;}
+		.pager a.page-num{padding:0 3px;}
+		.pager a.current,
+		.pager a.page-num:hover{color:#fff !important; background:#446995;}
+	.pager .txt-goto{width:23px; margin:0 3px;}
+	.pager #btn-goto{width:74px; height:19px; line-height:19px; border:none; background:url(/admin/images/user/bg.gif) no-repeat right -295px scroll;}
+
+/*===详细页公共样式 end===*/
+
+.sec-title{height:29px; line-height:29px; font-size:14px; margin-top:15px; background:#e6eff9; padding-right:10px;}
+	.sec-title h3{padding-left:28px; position:relative; float:left;}
+		.sec-title h3 span{position:absolute; left:13px; top:12px; width:6px; height:5px; background:url(/admin/images/user/bg.gif) no-repeat -310px -295px scroll;}
+	.sec-title a{margin-top:5px; margin-right:14px; font-size:12px; display:inline;}
+
+.wrap{margin:15px 20px;}
+
+	/*===财富列表页样式===*/
+	.wrap .user-info{margin:15px 0;}
+		.wrap .user-info .account-info{}
+			.wrap .user-info .account-info th{width:70px; text-align:right;}
+			.wrap .user-info .account-info td{width:210px;}
+	.wrap .grade-info{margin:20px 0;}
+		.wrap .grade-info .grade-info-table{border-collapse:collapse; border:1px solid #ddd; width:750px;}
+			.wrap .grade-info .grade-info-table a.intro-grade{color:#0048ff;}
+			.wrap .grade-info .grade-info-table th,
+			.wrap .grade-info .grade-info-table td{border-bottom:1px solid #ddd; background:#f6f6f6; height:35px; line-height:35px;}
+			.wrap .grade-info .grade-info-table th{font-weight:normal; text-align:right;}
+	.wrap .points-info{}
+		.wrap .points-info .points-type{position:relative;  margin-left:22px;}
+			.wrap .points-info .points-type li{float:left; height:26px; line-height:26px; background:#e7f0f9; border:1px solid #c3dbf4; padding:0 16px; font-size:14px;}
+			.wrap .points-info .points-type li.current{background:#fff; border-bottom-color:#fff;}
+		.wrap .points-info .line{font-size:0px; clear:both; margin:0; padding:0; height:1px; line-height:1px; background:#c3dbf4; position:relative; top:-1px; overflow:hidden; }
+		
+	/*===好友列表页样式===*/
+	.sec-title .user-name{font-size:13px; font-weight:normal; margin:0 5px;}
+		.wrap .friend-list ul li{position:relative; float:left; margin:0 20px 20px 0;}
+			.wrap .friend-list ul li .img-box{float:left;}
+				.wrap .friend-list ul li .img-box img{width:50px; height:50px; padding:1px; border:1px solid #e0e0e0; background:#fafafa;}
+			.wrap .friend-list ul li .user-info{margin:0px 0px 0px 64px; width:180px;}
+				.wrap .friend-list ul li .user-info .user-name{margin-bottom:15px;}
+					.wrap .friend-list ul li .user-info .user-name a{color:#0048ff;}
+				.wrap .friend-list ul li .user-info .user-address .province{margin-right:12px;}
+				
+	/*===用户详细信息页样式===*/
+	.wrap .be-black-times{float:right;}
+		.wrap .be-black-times .num-times{color:#f00;}
+	.wrap .user-info-edit{}
+		/*====提示条样式====*/
+		.wrap .user-info-edit .notice{height:34px; line-height:34px; padding-left:40px; background:#f5f5f5; position:relative;}
+			.wrap .user-info-edit .notice .icon-notice{left:14px; top:10px;}
+			
+		/*====编辑用户信息表格样式====*/
+		.wrap .user-info-edit table{width:800px; text-align:left;}
+			.wrap .user-info-edit table th,
+			.wrap .user-info-edit table td{padding:7px 0;}
+			.wrap .user-info-edit table th{text-align:right; font-weight:normal; width:110px;}
+				.wrap .user-info-edit table th .star{color:#f00;}
+			.wrap .user-info-edit table textarea{width:770px; margin-left:30px; height:75px; border:1px solid #cecece; font-size:12px;}
+			
+			.wrap .user-info-edit table .input-text{width:175px; margin-right:10px;}
+			
+			.wrap .user-info-edit table .tips{float:right; text-align:right;}
+			.wrap .user-info-edit table .tips-left{position:relative; padding-right:25px; height:18px; line-height:18px; white-space:nowrap;}
+				.wrap .user-info-edit table .tips-left .icon-tips{display:block; right:0px; top:0;}
+			
+			.wrap .user-info-edit table .contact-info{padding-left:20px; position:relative; height:20px; line-height:20px;}
+				.wrap .user-info-edit table .contact-info .icon-notice{left:0; top:2px;}
+				
+			.wrap .user-info-edit table .emphasize{color:#f00;}
+			
+			.wrap .user-info-edit table .banner-btn{width:100%; text-align:center;}
+				.wrap .user-info-edit table .banner-btn input{margin:0 45px; width:74px; height:19px; line-height:19px; border:none; background:url(/admin/images/user/bg.gif) no-repeat right -295px scroll;}
+			
+/*==详细页样式 end==*/
+
+
+/*群组后台新样式 @author xiaoming*/
+/*登录页*/
+/*登录页头部*/
+.login_body{background:#f9fcf0}
+#login_header{background:url(/admin/images/user/group_login_01.jpg) no-repeat center 0;height:329px;}
+#login_form{background:url(/admin/images/user/group_login_02.jpg) no-repeat center 0;height:249px;}
+	.login_form{margin:0 auto;width:335px;height:243px;padding-left:65px;padding-top:6px;}
+		.login_form .login_input {width:180px;height:25px;line-height:25px;background:none !important;border:none !important;}
+			.login_form .login_btn{display:block;width:145px;height:30px;cursor:pointer;background:transparent;border:none;}
+
+#login_footer{background:url(/admin/images/user/group_login_04.jpg) no-repeat center 0;height:100px;}
+
+/*管理页样式*/
+/*===管理页左侧菜单样式 begin===*/
+.group_menu{position:relative;  width:150px;overflow:hidden; display:inline; float:left;background:url(/admin/images/user/group_admin_15.jpg) repeat-y;}
+	.group_menu .group_menu-top{width:150px; height:70px; background:url(/admin/images/user/group_admin_02.jpg) no-repeat; clear:both;}
+	.group_menu .group_menu_body{width:150px; float:right;overflow:hidden;}
+	.group_menu .group_menu_body ul.group_menu_menu_item{float:left;width:150px;overflow:hidden;}
+		.group_menu .group_menu_body ul.group_menu_menu_item li{background:url(/admin/images/user/group_admin_09.jpg) no-repeat;
+							text-align:right;font-size:14px;color:#fff;width:150px;overflow:hidden;}
+				.group_menu .group_menu_body ul.group_menu_menu_item li a{position:relative; display:block;color:#fff;
+													line-height:34px;height:34px;padding-right:20px;width:130px;overflow:hidden;}
+					.group_menu .group_menu_body ul.group_menu_menu_item li a:hover{color:#ff0 !important;}
+			.group_menu .group_menu_body ul.group_menu_menu_item li ul{width:150px;overflow:hidden;}
+			.group_menu .group_menu_body ul.group_menu_menu_item li ul li{background:none;text-align:right;}
+			.group_menu .group_menu_body ul.group_menu_menu_item li ul li a{line-height:30px;height:30px;}
+				.group_menu .group_menu_body ul.group_menu_menu_item li ul li a:hover,.group_menu .group_menu_body ul.group_menu_menu_item li ul li a.act{background:url(/admin/images/user/group_admin_11.jpg);}
+/*===管理页左侧菜单样式 end===*/
+/*===管理页头部 begin===*/
+.group_header{background:url(/admin/images/user/group_admin_04.jpg) repeat-x;height:41px;}
+	.group_header_bg{background:url(/admin/images/user/group_admin_03.jpg) no-repeat;height:41px;}
+
+	.group_header_bg h1{position:absolute; left:230px; top:5px; font-family:"微软雅黑"; font-size:22px; font-weight:normal; 
+						width:375px; height:28px; line-height:28px;color:#244400;}
+	.group_header .extra-info{float:right; display:inline; margin:5px 20px 0px 0px;}
+		.group_header .extra-info .user-name,
+		.group_header .extra-info .logout{float:left;}
+		
+		.group_header .extra-info .user-name{font-size:12px; margin-right:20px; height:25px; line-height:25px;}
+		
+		
+			.group_header .extra-info .logout a{position:relative; float:left; width:67px; height:25px; background:url(/admin/images/user/bg.gif) no-repeat 0 -250px scroll; line-height:25px; text-align:center;}
+
+
+
+
+/*tab样式*/
+.topic_tab{height:25px;border-bottom: 1px solid #446995;margin-bottom:10px;}
+	.topic_tab ul li{float:left;margin-right:10px;}
+		.topic_tab ul li a{float:left;height:25px;padding:0px 10px;line-height:25px;background: #E9E9E9 ;color: #446995}
+		.topic_tab ul li a:hover,.topic_tab ul li a.act{background: #446995;color: #fff !important;}
+.topic_tab2{height:25px;border: 1px solid #C3DBF4;padding:5px;margin-bottom:10px;}
+.topic_tab3{height:30px;margin-bottom:10px;}
+	.topic_tab3 a{float:left;background: #ACACE1;color:#330066;padding:0px 10px;margin-right:10px;height:25px;line-height:25px;}
+	.topic_tab3 a.act{float:left;background: #330066 ;color: #EFEFF9 !important;}
+.topic_list{padding:10px;overflow:hidden;height:1000px;}
+
+
+    .formtable caption { padding: 10px 0; color: #446995; font-size: 12px; }
+        .formtable caption h2 { padding-bottom: 8px; border-bottom: 1px solid #446995; color: #446995; font-size: 14px; height:15px;}
+        .formtable caption p { margin-top: 8px; }
+            .formtable td, .formtable th { padding: 3px; color:#446995;font-size:12px;font-weight:bold !important;}
+            .formtable td a, .formtable th a{color:#333}
+            .formtable th { padding-right: 1em; text-align: right; }
+			.formtable td span.tips2{color:#999;font-weight:normal;padding-left:10px}
+.wrap .user-info-edit table .cke_editor{width:auto}
+.wrap .user-info-edit table span.cke_skin_kama{margin:0}

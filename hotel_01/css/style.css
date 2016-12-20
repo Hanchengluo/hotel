@@ -1,0 +1,344 @@
+body{
+	width: 1280px;
+	height: 720px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	background-image: url("../img/bg.png");
+	margin: 0px;
+	padding: 0px;
+}
+
+/***********main start****************/
+#main{
+	width: 1280px;
+	height: 720px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	background: url("../img/bg.jpg");
+        display:none;
+}
+#apps{
+    position: absolute;
+    top: 130px;
+    left: 202px;
+    width: 900px;
+    height: 430px;
+}
+#remind{
+    position: relative;
+    top: 269px;
+    left: 388px;
+    width: 500px;
+    height: 98px;
+    background: #f7ae00;
+    text-align: center;
+    padding-top: 50px;
+    font-size: 32px;
+    color: #fff;
+    border-radius: 20px;
+}
+.bg{
+    width: 200px;
+    height: 430px;
+    background: rgba(0,0,0,0.6);
+}
+.font{
+	font-size: 32px;
+	color: #fff;
+}
+.lf{float: left;}
+.mg-rt{margin-right: 25px;}
+.focus_pic{
+    position: relative;
+    /* top: 50%; */
+    /* left: 50%; */
+    /* transform: translate(-50%,-50%); */
+    top: 155px;
+    left: 33px;
+}
+.focus_select{    
+	width: 180px;
+    height: 410px;
+    border:10px solid #f7ae00;
+}
+#logo{
+    position: absolute;
+    width: 186px;
+    height: 75px;
+    top: 33px;
+    left: 544px;
+    /*background: rgba(0,0,0,0.3);*/
+    background: #081D5B;
+}
+#loading{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 550px;
+    left: 1080px; 
+}
+/********order food***********/
+#foodmodule{
+	width: 1280px;
+	height: 720px;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0px;
+	padding: 0px;
+	background: url("../img/vod_bg.jpg");
+        display: none;
+}
+table {
+    /*display: table;*/
+    border-collapse: separate;
+    border-spacing: 5px;
+    border-color: grey;
+}
+#menutypelist{
+    position:absolute;
+    top:110px;
+    left:90px;
+    width:632px;
+    height:160px;
+}
+#menulist td{
+    height:288px;
+    width:270px;
+    text-align: center;
+    vertical-align: top;
+}
+.price{
+    font-size: 25px;
+    color:yellow;
+    text-align: center;
+    width:270px;
+    height:50px;
+}
+.foodname{
+    font-size: 25px;
+    color:white;
+    text-align: center;
+    width:270px;
+    height:50px;
+}
+#menudetail{
+    position:absolute;
+    left:58px;
+    top:20px;
+    width:1164px;
+    height:679px;
+    visibility:visible;
+    background:url(../img/detail_bg.png) 50% 50% no-repeat;
+    display: none;
+}
+#detail_img{
+    position: absolute;
+    left:74px;
+    top:79px;
+    width:712px;
+    height:526px;
+}
+#detail_price{
+    position: absolute;
+    left: 800px;
+    top:94px;
+    width:272px;
+    height: 61px;
+    font-size: 40px;
+    color:yellow;
+}
+#detail_name{
+     position: absolute;
+     left: 800px;
+     top:166px;
+     width:272px;
+     height: 61px;
+     font-size: 40px;
+     color:white;
+}
+#sub{
+     width: 79px;
+     text-align: center;
+     color:rgb(255,255,255);
+     font-size: 50px;
+     background: url(../img/tm.png) 0% 50% no-repeat;
+}
+#num{
+     background-color: #FFFFFF;
+     text-align: center;
+     width:79px;
+     height: 52px;
+     line-height:52px;
+     font-size: 50px;
+}
+#add{
+     width: 79px;
+     text-align: center;
+     color:rgb(255,255,255);
+     font-size: 50px;
+     background: url(../img/button1.png) 97% 45% no-repeat;
+}
+#cart{
+     position:absolute;
+     left:824px;
+     top:456px;
+     width:239px;
+     height:65px;
+     color:rgb(98,98,98);
+     font-size: 27px;
+     line-height: 65px;
+     text-align: center;
+     background:url(../img/cart0.png) 50% 50% no-repeat;
+}
+#order{
+     position:absolute;
+     left:824px;
+     top:536px;
+     width:239px;
+     height:65px;
+     color:white;
+     font-size: 27px;
+     line-height: 65px;
+     text-align: center;
+     background:url(../img/button0.png) 50% 50% no-repeat;
+}
+#cartmenulist{
+    position:absolute;
+    left:58px;
+    top:20px;
+    width:1164px;
+    height:679px;
+    visibility:visible;
+    background:url(../img/shopping_cart_bg.png) 50% 50% no-repeat;
+    display: none;
+}
+.cartdetail_title{
+    color: #7a7979;
+    font-weight: bold;
+    font-size: 28px;
+    text-align: center;
+}
+.cartdetail{
+    color:#FFFFFF;
+    font-size: 25px;
+    text-align: center;
+    background: no-repeat center;
+}
+#loading{
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    top: 550px;
+    left: 1080px; 
+}
+#gamemodel{
+    width: 1280px;
+    height: 720px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    background: url("../img/vod_bg.jpg");
+    display: none;
+}
+#gamemodelname{
+    position: absolute;
+    top:35px;
+    left:87px;
+    font-size:49px;
+    color:whitesmoke;
+}
+#gamelist{
+    position: absolute;
+    top: 117px;
+    left: 62px;
+    background: url("../img/vod_left_bg.png") no-repeat;
+    background-size:350px;
+    text-align: center;
+    font-size:35px;
+    color:#686767;
+}
+
+#gamerightname{
+    position: absolute;
+    top:125px;
+    left:465px;
+    width:301px;
+    height:30px;
+    line-height:30px;
+    font-size:39px;
+    color:#B0AEAE;
+}
+#gamenum{
+    position: absolute;
+    top:120px;
+    left:1091px;
+    font-size:35px;
+    color: yellow;
+}
+#gamebigimg{
+    position: absolute;
+    top:187px;
+    left:466px;
+}
+
+.opt_delbtn{
+    width:105px;
+    height:58px;
+    text-align: center;
+    line-height: 58px;
+    overflow: hidden;
+    color:black;
+    border-radius:9px;
+    -webkit-border-radius:15px;
+    -moz-border-radius: 9px;
+    background-color:rgb(207, 195, 195);
+    display:none;
+}
+.cart_numpush{
+    position: absolute;
+    left: 413px;
+    width:50px;
+    height:50px;
+    background-color:rgb(207, 195, 195);
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+}
+.cart_numminus{
+    position: absolute;
+    left: 533px;
+    width:50px;
+    height:50px;
+    background-color:rgb(207, 195, 195);
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 30px;
+    font-weight: bold;
+    color:black;
+}
+.cart_num{
+    position: absolute;
+    left: 462px;
+    width:75px;
+    height:50px;
+    background-color:white;
+    line-height: 50px;
+    overflow: hidden;
+    font-size: 30px;
+    color:black;
+}
+
+.cart_numdiv{
+    width:190px;
+    height:60px;
+    display:none;
+    padding-top: 10px;
+}

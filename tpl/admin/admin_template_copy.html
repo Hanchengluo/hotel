@@ -1,0 +1,170 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>项目列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body>
+
+<script  type="text/JavaScript">
+function on_submit()
+{
+
+	var field = document.getElementsByName("fields[]");
+	var fields = "";
+	for( var i = 0; i < field.length; i++ )
+	{
+	if ( field[i].checked ){
+	fields += field[i].value+',';
+	}
+	}
+
+
+	var data_field = document.getElementsByName("data_fields[]");
+	var data_fields = "";
+	for( var i = 0; i < data_field.length; i++ )
+	{
+	if ( data_field[i].checked ){
+	data_fields += data_field[i].value+',';
+	}
+	}
+
+
+	var project_id = 	document.getElementById("project_id").value;
+	var select_project_id = 	document.getElementById("select_project_id").value;
+	var select_template_id = 	document.getElementById("select_template_id").value;
+	if(select_project_id =="" || select_template_id=="" ){
+		alert("请选择项目名称和模板名称!");
+		return false;
+		}
+
+    var postData = [];
+    postData.push("project_id=" + project_id);
+    postData.push("select_project_id=" + select_project_id); 
+    postData.push("select_template_id=" + select_template_id); 
+    postData.push("fields=" + fields);
+    postData.push("data_fields=" + data_fields);      
+    SetAjax("template_copy_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("拷贝成功！");
+          location.href="template_list.php?project_id={%$g_show.project_id%}";
+        }       
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+function show_template(project_id){
+
+	
+    SetAjax("ajax_get_template_by_proj_id.php", "post:" +"action=get_template&project_id="+{%$g_show.project_id%}+"&select_project_id="+project_id, function(data){
+        eval("var res = " + data);       
+          
+       var temp_option=" <select name=\"select_template_id\" id=\"select_template_id\" onchange=\"show_field(this.value)\">	<option value=>请选择模板</option>";
+        if(res.status == 0)
+        {
+        var arr=res.data;
+   
+        for(var i=0;i<arr.length;i++){
+        	temp_option+="<option value="+arr[i]['template_id']+">"+arr[i]['template_name']+"</option>"
+       
+        	}
+				temp_option+="</select>";
+         	document.getElementById("tr_template_select").innerHTML=temp_option;
+           
+        }       
+        
+    }, true); 
+
+	}
+	
+function show_field(template_id){
+		var select_project_id = 	document.getElementById("select_project_id").value;
+	
+    SetAjax("ajax_get_template_by_proj_id.php", "post:" +"action=get_field&project_id="+{%$g_show.project_id%}+"&select_template_id="+template_id+"&select_project_id="+select_project_id, function(data){
+    eval("var res = " + data);
+    
+    if(res.list){     
+    var check_box_field="<table id=\"table_field_id\">";
+  	check_box_field+=res.list;
+ 	  check_box_field+="</table>";
+ 		}
+ 		if(res.list1){
+	    var check_box_data_field="<table id=\"table_data_field_id\">";
+	    check_box_data_field+=res.list1;
+	    check_box_data_field+="</table>";	 
+	  } 
+        if(res.status == 0)
+        {
+         if(check_box_field){
+         	document.getElementById("td_field_table").innerHTML=check_box_field
+         	}
+       if(check_box_data_field){
+       	document.getElementById("td_data_field_table").innerHTML=check_box_data_field
+       	}
+        
+       }       
+      
+        
+    }, true); 
+
+
+
+	}	
+</script>
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+模板设计请在SVN中完成
+</div>
+
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<table style='width:100%'>
+  <tr align="center">
+    <td width=25%><b>拷贝模板</b></td><td><b>值</b></td>
+  <tr><td>拷贝项目名</td>				<td>
+  	<select name="select_project_id" id="select_project_id" onchange="show_template(this.value)">
+  		<option value="">请选择项目</option>
+  		{%section name="count" loop=$g_show.project_list%}
+  		<option value={%$g_show.project_list[count].project_id%}>{%$g_show.project_list[count].project_name%}</option>
+  		{%/section%}
+  		
+  </select>
+  	<input type='hidden' size='80' id='project_id' name='project_id' value='{%$g_show.project_id%}'  /></td></tr>
+<tr><td>拷贝模板名</td>	
+<td id="tr_template_select">
+<select name="select_template_id" id="select_template_id" onchange="show_field(this.value)">	
+	<option value=>请选择模板</option>
+</select>
+	</td></tr>
+	<tr><td>请选择模板域</td><td id="td_field_table"></td></tr>
+	<tr><td>请选择数据域</td><td id="td_data_field_table"></td></tr>	
+<tr><td>生成的模板名为“拷贝模板名-管理员名-时间参数”</td>						<td><input type='submit' value=' 提 交 ' onclick='on_submit();'/>&nbsp;<input type='submit' value=' 返 回 ' onclick='history.back()'/></td></tr>
+  </tr>
+
+</table>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,273 @@
+body {
+  background-color: transparent;
+  overflow: hidden;
+  text-shadow: #000 1px 1px 2px; 
+}
+
+.videoEle {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1280px; 
+  height: 720px; 
+  background-color:#000000;
+}
+
+#main {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1280px;
+  height: 720px;
+  background: url("/img/bg.png");
+}
+
+#mainList {
+  position: absolute;
+  left: 200px;
+  top: 210px;
+  width: 340px; 
+  height: 300px; 
+  display: none;
+}
+
+.menuListItem {
+  position: absolute; 
+  height: 40px;
+  margin-top: -3px;
+  line-height: 40px;
+  width: 100%;
+  color: #b7b7b7;
+  text-align: center;
+  font-size: 32px;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 0.3s;
+}
+
+#playerBar {
+  position: absolute;
+  width: 1180px;
+  height: 156px;
+  left: 50px;
+  top: 480px;
+  background-image: url("img/MediaPlayerBar.png");
+  background-repeat: no-repeat;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1s;
+  opacity: 0;
+}
+
+#playerBarInfo {
+  float: left;
+}
+
+#playerBarProgress {
+  position: absolute; 
+  left: 0px;
+  width: 0px; 
+  height: 10px; 
+  background-color: #00C0FF;
+/*  box-shadow: 0px 0px 10px #FFFFFF;
+  -webkit-border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 20px #FFFFFF;*/
+}
+
+#playerBarProgressHead {
+  position: absolute; 
+  left: 0px;
+  width: 26px; 
+  height: 10px; 
+/*  background-image: url("../img/progressHead.png");*/
+}
+
+#playerBarTime {
+  position: absolute; 
+  left: 930px; 
+  top: 20px; 
+  width: 230px; 
+  height: 40px; 
+  line-height: 42px;
+  font-size: 30px;
+  color: #FFFFFF;
+}
+
+#playerBarTitle {
+  position: absolute; 
+  margin-left: 30px; 
+  margin-top: 10px;
+  left: 0px; 
+  top: 20px; 
+  width: 500px; 
+  height: 50px; 
+  line-height: 42px;
+  font-size: 40px;
+  white-space: nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+  color: #FFFFFF;
+}
+
+#playerBarHelp {
+  position: absolute; 
+  left: 20px; 
+  top: 90px; 
+  width: 700px; 
+  height: 100px; 
+  float: left;
+}
+
+.playerBarHelpEle {
+  float: left;
+  width: 120px;
+}
+
+.playerBarHelpIcon {
+  width: 40px;
+  height: 40px;
+}
+
+.playerBarHelpSpan {
+  position: absolute;
+  top: 8px;
+  color: #FFFFFF;
+  font-size: 20px;
+}
+
+#playIcon {
+  position: absolute; 
+  left: 540px; 
+  top: 200px;
+  width: 200px; 
+  height: 200px;
+  display: none;  
+}
+
+#muteIcon {
+  position: absolute; 
+  left: 1100px; 
+  top: 100px; 
+  display: none; 
+}
+
+#playerLoading {
+  position: absolute; 
+  left: 490px; 
+  top: 200px;
+  width: 300px; 
+  height: 293px; 
+  line-height: 42px;
+  font-size: 24px;
+  background-image: url("../img/loading.gif");
+  display: none;
+}
+
+#volbar {
+  position: absolute;
+  width: 350px;
+  height: 50px;
+  left: 800px;
+  top: 85px;
+  background-repeat: no-repeat;
+}
+
+#volnum {
+  position: absolute;
+  width: 50px;
+  height: 30px;
+  left: 300px;
+  top: 12px;
+  font-size: 25px;
+  color: #FFFFFF;
+  line-height: 30px;
+  text-align: center;
+}
+
+#curvol {
+  position: absolute;
+  left: 43px;
+  top: 22px;
+  height: 8px;
+  -webkit-border-radius: 3px;
+  -webkit-box-shadow: 0px 0px 20px #FFFFFF;
+  background-color: #0086E5;
+  -webkit-transition-property: width;
+  -webkit-transition-duration: 0.5s;
+}
+
+#curvolHead {
+  position:absolute;
+  left : 25px; 
+  top : 14px;
+  width: 25px;
+  height : 25px;
+  -webkit-transition-property: left;
+  -webkit-transition-duration: 0.5s;
+}
+
+#videoFrame {
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  width: 100px; 
+  height: 100px;
+}
+
+#audio_bk {
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  width: 1280px; 
+  height: 720px; 
+  display: none;
+}
+
+#mainTime {
+  position: absolute; 
+  left: 1080px; 
+  top: 95px; 
+  width: 140px; 
+  height: 60px; 
+  color: #FFFFFF; 
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#mainTitle {
+  position: absolute; 
+  left: 160px; 
+  top: 160px; 
+  font-size: 40px; 
+  color: #FFFFFF; 
+  text-shadow: 0px 0px 50px #FFFFFF;
+}
+
+.mainAD {
+  position: absolute; 
+  left: 650px; 
+  top: 182px; 
+  width: 500px; 
+  height: 350px; 
+  border: #FFFFFF solid 2px;
+  -webkit-border-radius: 8px;
+  -webkit-transition-property: all;
+  -webkit-transition-duration: 1.5s;
+}
+
+#mainItems {
+  position: absolute; 
+  left: 0px; 
+  top: 0px; 
+  width: 1280px; 
+  height: 720px;
+}
+
+#mainNotify {
+  position: absolute; 
+  left: 230px; 
+  top: 300px; 
+  width: 300px; 
+  height: 100px; 
+  color: #FFFFFF; 
+  font-size: 32px; 
+}
+

@@ -1,0 +1,149 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>文档列表</title>
+<link rel="stylesheet" type="text/css" href="../style/main.css" />
+<script language="javascript" type="text/javascript" src="../js/base.js"></script>
+</head>
+<body onload="change4preview($('data_type').value);">
+
+<script  type="text/JavaScript">
+function on_submit()
+{
+	var project_id = $("project_id").value;
+	var template_id = $("template_id").value;
+	var data_id = $("data_id").value;
+	var data_name = $("data_name").value;
+	var data_ename = $("data_ename").value;
+	var data_type = $("data_type").value;
+	var data_expire = $("data_expire").value;
+	var data_detail = $("data_detail").value;
+	var data_arithmetic = $("data_arithmetic").value;
+	var status = $("status").value;
+	if($("use_cache").checked == true)
+		var use_cache = 1;
+	else
+		var use_cache = 0;
+	
+    var postData = [];
+    postData.push("project_id=" + project_id);
+    postData.push("template_id=" + template_id); 
+    postData.push("data_id=" + data_id); 
+    postData.push("data_name=" + data_name);
+    postData.push("data_ename=" + data_ename);
+    postData.push("data_type=" + data_type);
+    postData.push("data_expire=" + data_expire);
+    postData.push("data_detail=" + data_detail); 
+    postData.push("data_arithmetic=" + data_arithmetic); 
+    postData.push("status=" + status); 
+    postData.push("use_cache=" + use_cache); 
+    
+    SetAjax("datadef_edit_post.php", "post:" + postData.join("&"), function(data){
+        eval("var res = " + data);
+        if(res.status == 0)
+        {
+        	alert("更新成功！");
+            location.reload();
+        }
+        else    
+        {       
+            alert(res.error);
+        }       
+    }, true);   
+}
+function preview(){
+	var project_id = $("project_id").value;
+	var template_id = $("template_id").value;
+	var data_id = $("data_id").value;
+	var document_id = $("document_id").value;
+	var args = encodeURIComponent($("args").value);
+	alert(args);
+	var postData = [];
+    postData.push("project_id=" + project_id);
+    postData.push("template_id=" + template_id); 
+    postData.push("data_id=" + data_id); 
+    postData.push("document_id=" + document_id);
+    postData.push("args=" + args); 
+
+    SetAjax("datadef_preview.php", "post:" + postData.join("&"), function(data){
+        $("preview").innerHTML = data;     
+    }, true); 
+}
+
+function change4preview(val)
+{
+	if(val == 0)
+	{
+		$("document_select").style.display = "none";
+		$("arg_input").style.display = "none";
+	}
+	if(val == 1)
+	{
+		$("document_select").style.display = "inline";
+		$("arg_input").style.display = "none";
+	}
+	if(val == 2)
+	{
+		$("document_select").style.display = "inline";
+		$("arg_input").style.display = "inline";
+	}
+	
+}
+</script>
+
+<div width='100%' class="nav">
+当前位置：
+<a href='project.php'>我的项目</a>&nbsp;>&nbsp;
+<a href='template_list.php?project_id={%$g_show.project_id%}'>{%$g_show.project_name%}</a>&nbsp;>&nbsp;
+<a href='document_list.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}'>{%$g_show.template_name%}</a>
+</div>
+<div width='100%' class='platform_toolbar_main'>
+{%$g_show.navigation_right%}
+	
+</div>
+<div width='100%' class='platform_toolbar_child'>
+	模板设计请在SVN中完成 <a href='datadef_edit.php?project_id={%$g_show.project_id%}&template_id={%$g_show.template_id%}' >新建数据域</a>
+</div>
+<div width='100%' class="platform_error">
+
+</div>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+
+<table style='width:100%'>
+  <tr align="center">
+    <td><b>项目</b></td><td><b>值</b></td>
+    {%$g_show.list%}	
+  </tr>
+
+</table>
+
+<div class="pages">{%$g_show.page_bar%}</div>
+<form method="get" action="datadef_preview.php?=" target=_blank>
+
+<div id=document_select style="display:inline;">
+<input type=hidden name="project_id" value="{%$smarty.get.project_id%}">
+<input type=hidden name="template_id" value="{%$smarty.get.template_id%}">
+<input type=hidden name="data_id" value="{%$smarty.get.data_id%}">
+文档选择：<select name="document_id" style="display:inline;">
+{%section name=loop loop=$g_show.document_list%}
+<option value="{%$g_show.document_list[loop].d_id%}">{%$g_show.document_list[loop].d_id%}</option>
+{%/section%}
+</select>
+</div>
+<div>
+<div id=arg_input style="display:inline;">
+参数：<input name="args" type=text style="width:300px;display:inline" />
+</div>
+
+<input type=submit value="预览" style="display:inline;" />
+<br><br><br><br><br><br><br><br><br><br><br>
+</form>
+<div id="preview" style="height: auto">
+
+</div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>hotel主页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script type="text/javascript" src="js/main.js"></script>
+        <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+        <script type="text/javascript" src="js/key.js"></script>
+        <script type="text/javascript" src="js/orderfood.js"></script>
+        <script type="text/javascript" src="js/gamemodel.js"></script>
+    </head>
+    <body>
+
+        <div id="main">
+            <div id="apps">
+                <div id="a0" class="bg lf mg-rt font" ><img src="./img/a0.png" class="focus_pic" alt="酒店信息"></div>
+                <div id="a1" class="bg lf mg-rt font" ><img src="./img/a1.png" class="focus_pic" alt="互动点播"></div>
+                <div id="a2" class="bg lf mg-rt font"><img src="./img/a2.png" class="focus_pic" alt="休闲娱乐"></div>
+                <div id="a3" class="bg lf font"><img src="./img/a3.png" class="focus_pic" alt="more"></div>
+            </div>
+            <div id="remind" style="display:none">敬请期待精彩内容......</div>
+            <img id="logo" src="./img/logo.png" alt="logo"/>
+        </div>
+        <div id="orderfood">
+            <div id="foodmodule">
+                <div><img style="position:absolute; top:33px;left:60px;" src="img/foodlogo.png"/></div>
+                <div style="position:absolute;left:60px;top:93px;width:160px;height:2px;background-color:#5d5c5c;"></div>
+                <div style="position:absolute;left:60px;top:94px;width:1100px;height:3px;background:url(img/top_line.png) no-repeat center;"></div>
+                <!--品种单-->
+                <table id="menutypelist" border="0" cellspacing="0" cellpadding="0" >
+                    <tbody>
+                        <tr>
+                            <!--<td id="menutype1" style="width:125px;height:160px;background:url(img/menu1.png) no-repeat center;"></td>
+                            <td id="menutype2" style="width:125px;height:160px;background:url(img/menu2_2.png) no-repeat center;"></td>
+                            <td id="menutype3" style="width:125px;height:160px;background:url(img/menu3_3.png) no-repeat center;"></td>
+                            <td id="menutype4" style="width:125px;height:160px;background:url(img/menu4_4.png) no-repeat center;"></td>
+                            <td id="menutype5" style="width:125px;height:160px;background:url(img/menu5_5.png) no-repeat center;"></td>
+                            <!--<td></td>-->
+                            <td><img id="menutype1" src="img/menu1.png" width="125" height="160"/></td>
+                            <td><img id="menutype2" src="img/menu2_2.png" width="125" height="160"/></td>
+                            <td><img id="menutype3" src="img/menu3_3.png" width="125" height="160"/></td>
+                            <td><img id="menutype4" src="img/menu4_4.png" width="125" height="160"/></td>
+                            <td><img id="menutype5" src="img/menu5_5.png" width="125" height="160"/></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!--菜单-->
+                <div style="position:absolute;top:303px;left:0px;width:1280px;height:288px;overflow: hidden;">
+                    <div id="menulist" style="position:absolute;top:0px;left:-170px;">
+                        <table border="0" cellspacing="0" cellpadding="0">
+                            <tbody>
+                                <tr>
+                                    <td id="menu_0" style="background:url(img/list_blur.png) no-repeat center;">
+                                        <img id="img_0" src="img/tm.png" width="250" height="175"/>
+                                        <div id="price_0" class="price"></div>
+                                        <div id="foodname_0" class="foodname"></div>
+                                    </td>
+                                    <td id="menu_1" style="background:url(img/list_blur.png) no-repeat center;">
+                                        <img id="img_1" src="img/tm.png" width="250" height="175"/>
+                                        <div id="price_1" class="price"></div>
+                                        <div id="foodname_1" class="foodname"></div>
+                                    </td>
+                                    <td id="menu_2" style="background:url(img/list_blur.png) no-repeat center;">
+                                        <img id="img_2" src="img/tm.png" width="250" height="175"/>
+                                        <div id="price_2" class="price"></div>
+                                        <div id="foodname_2" class="foodname"></div>
+                                    </td>
+                                    <td id="menu_3" style="background:url(img/list_blur.png) no-repeat center;">
+                                        <img id="img_3" src="img/tm.png" width="250" height="175"/>
+                                        <div id="price_3" class="price"></div>
+                                        <div id="foodname_3" class="foodname"></div>
+                                    </td>
+                                    <td id="menu_4" style="background:url(img/list_blur.png) no-repeat center;">
+                                        <img id="img_4" src="img/tm.png" width="250" height="175"/>
+                                        <div id="price_4" class="price"></div>
+                                        <div id="foodname_4" class="foodname"></div>
+                                    </td>
+                                    <td id="menu_5" style="background:url(img/list_blur.png) no-repeat center;">
+                                        <img id="img_5" src="img/tm.png" width="250" height="175"/>
+                                        <div id="price_5" class="price"></div>
+                                        <div id="foodname_5" class="foodname"></div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--菜单光标-->
+                <img id="menulist_focus" src="img/vod_list_focus.png" style="position:absolute;top:305px;left:112px;width:265px;height:288px;display:none;"/>
+                <!--0/0-->
+                <div style="position:absolute;left:60px;top:635px;width:1100px;height:3px;background:url(img/top_line.png) no-repeat center;"></div>
+                <div style="position:absolute;top:650px;left:1000px;width:100px;height:50px;font-size: 30px;color:yellow">
+                    <span id="nownum">0</span>
+                    <span>/</span>
+                    <span id="totelnum">0</span>
+                </div>
+            </div>
+            <!--菜购物车详情-->
+            <div id="menudetail">
+                <img id="detail_img" src="img/tm.png"/>
+                <div id="detail_price"></div>
+                <div id="detail_name"></div>
+                <div style="position: absolute;left: 824px;top:376px;">
+                    <table style="width:237px;height: 65px;background:url(img/button0.png) no-repeat center; border-spacing:0px" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr>
+                                <td id="sub">-</td>
+                                <td style="width:80px;">
+                                    <div id="num">1</div>
+                                </td>
+                                <td id="add">+</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div id="cart">加入购物车</div>
+                <div id="order">
+                    <span>购物车结算</span>
+                    <span id="cartTotalnum">(0)</span>
+                </div>
+            </div>
+            <!--购物车菜单列表-->
+            <div id="cartmenulist">
+                <div style="position: absolute;left: 73px;top:75px">
+                    <table style="width:818px;height:532px;table-layout:fixed;border-spacing:0px" border="0" cellpadding="0" cellspacing="0">
+                        <tbody>
+                            <tr class="cartdetail_title">
+                                <td height="55px;">菜&nbsp;品</td>
+                                <td>菜&nbsp;名</td>
+                                <td width="190px;">数&nbsp;量</td>
+                                <td width="110px">单&nbsp;价</td>
+                                <td width="111px;">操&nbsp;作</td>
+                            </tr>
+                            <tr id="cartlisttr0" class="cartdetail" style="background-color:rgb(19, 30, 232);">
+                                <td width="154px;"><img id="cart_img0" src="img/tm.png" width="154" height="100"/></td>
+                                <td id="cart_name0" width="125px;"></td>
+                                <td width="18px;" ><!--style="background-color: yellow"-->
+                                    <div id="cart_numdiv0" class="cart_numdiv">
+                                    <div id="cart_numpush0" class="cart_numpush">+</div>
+                                    <div id="cart_num0" class="cart_num"></div>
+                                    <div id="cart_numminus0" class="cart_numminus">-</div>
+                                    </div>
+                                </td>
+                                <td id="cart_price0"></td>
+                                <td id="car_opt0"><div id="opt_delbtn0" class="opt_delbtn">删&nbsp;除</div></td>
+                            </tr>
+                            <tr id="cartlisttr1" class="cartdetail">
+                                <td width="154px;"><img id="cart_img1" src="img/tm.png" width="154" height="100"/></td>
+                                <td id="cart_name1" width="125px;"></td>
+                                <td  width="18px;">
+                                    <div id="cart_numdiv1" class="cart_numdiv">
+                                    <div id="cart_numpush1" class="cart_numpush">+</div>
+                                    <div id="cart_num1" class="cart_num"></div>
+                                    <div id="cart_numminus1" class="cart_numminus">-</div>
+                                    </div>
+                                </td>
+                                <td id="cart_price1"></td>
+                                <td id="car_opt1"><div id="opt_delbtn1" class="opt_delbtn">删&nbsp;除</div></td>
+                            </tr>
+                            <tr id="cartlisttr2" class="cartdetail">
+                                <td width="154px;"><img id="cart_img2" src="img/tm.png" width="154" height="100"/></td>
+                                <td id="cart_name2" width="125px;"></td>
+                                <td width="18px;">
+                                    <div id="cart_numdiv2" class="cart_numdiv">
+                                    <div id="cart_numpush2" class="cart_numpush">+</div>
+                                    <div id="cart_num2" class="cart_num"></div>
+                                    <div id="cart_numminus2" class="cart_numminus">-</div>
+                                    </div>
+                                </td>
+                                <td id="cart_price2"></td>
+                                <td id="car_opt2"><div id="opt_delbtn2" class="opt_delbtn">删&nbsp;除</div></td>
+                            </tr>
+                            <tr id="cartlisttr3" class="cartdetail">
+                                <td width="154px;"><img id="cart_img3" src="img/tm.png" width="154" height="100"/></td>
+                                <td id="cart_name3" width="125px;"></td>
+                                <td  width="18px;">
+                                    <div id="cart_numdiv3" class="cart_numdiv">
+                                    <div id="cart_numpush3" class="cart_numpush">+</div>
+                                    <div id="cart_num3" class="cart_num"></div>
+                                    <div id="cart_numminus3" class="cart_numminus">-</div>
+                                    </div>
+                                </td>
+                                <td id="cart_price3"></td>
+                                <td id="car_opt3"><div id="opt_delbtn3" class="opt_delbtn">删&nbsp;除</div></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="position: absolute;left: 925px;top:272px;width:167px;height:100px;">
+                    <table>
+                        <tbody>
+                            <tr style="font-size:25px;color:#7a7979;">
+                                <td>总金额</td>
+                            </tr>
+                            <tr style="color: #fdd103;line-height: 42px;font-size: 33px;">
+                                <td id="cartTotalprice">0</td>
+                            </tr>
+                            <tr style="color:#7a7979;font-size: 23px;">
+                                <td>暂无下单功能请打电话订单</td>
+                            </tr>
+                            <tr style="color: #fdd103;line-height: 42px;font-size: 33px;">
+                                <td>电话:010-6666666</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="position: absolute;left: 912px;top:560px;width:90px;height:60px;font-size: 30px;color:yellow">
+                    <span id="nowcartpage">0</span>
+                    <span>/</span>
+                    <span id="Totalcartpage">0</span>
+                </div>
+            </div>
+        </div>
+        <!--game-->
+        <div id="gamemodel">
+            <div id="gamemodelname">益智游戏</div>
+            <div>
+                <!--<img id="gamelistfocus" src="img/type_focus.png"/>-->
+                <table id="gamelist" width="350" cellpadding="0" cellspacing="0" >
+                    <tbody>
+                        <tr>
+                            <td id="gamelist_0" width="350" height="115" align="center" style="background: url(img/type_focus.png) no-repeat center;background-size:330px;">2048</td>
+                        </tr>
+                        <tr>
+                            <td id="gamelist_1" width="350" height="115" align="center" style="background: url(img/tm.png) no-repeat center;background-size:330px;">堆木头</td>
+                        </tr>
+                        <tr>
+                            <td id="gamelist_2" width="350" height="115" align="center" style="background: url(img/tm.png) no-repeat center;background-size:330px;">俄罗斯方块</td>
+                        </tr>
+                        <tr>
+                            <td id="gamelist_3" width="350" height="115" align="center" style="background: url(img/tm.png) no-repeat center;background-size:330px;">消消乐</td>
+                        </tr>
+                        <tr>
+                            <td id="gamelist_4" width="350" height="115" align="center" style="background: url(img/tm.png) no-repeat center;background-size:330px;">水果</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div>
+                    <div id="gamerightname">游戏名</div>
+                    <div id="gamenum">
+                        <span id="gamenownum">0</span>
+                        <span>/</span>
+                        <span id="gametotalnum">0</span>
+                    </div>
+                    <img src="img/vod_line.png" style="position: absolute;top:159px;left:465px;width:776px;"/>
+                </div>
+                <div><img id="gamebigimg" src="img/2048_1.png" width="776" height="500"/></div>
+            </div>
+        </div>
+        <img id="loading" src="./img/loading.gif" alt="loading" style="display:none"/>  
+    </body>
+</html>

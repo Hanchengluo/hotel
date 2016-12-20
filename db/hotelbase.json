@@ -1,0 +1,945 @@
+{
+    "channel": [
+        {
+            "name": "卡酷动画",
+            "program_number": 51,
+            "url": "dvb://243000.6875.3.641"
+        },
+        {
+            "name": "深圳卫视",
+            "program_number": 52,
+            "url": "dvb://243000.6875.3.642"
+        },
+        {
+            "name": "宁夏卫视",
+            "program_number": 53,
+            "url": "dvb://243000.6875.3.643"
+        },
+        {
+            "name": "新疆卫视",
+            "program_number": 79,
+            "url": "dvb://243000.6875.3.644"
+        },
+        {
+            "name": "甘肃卫视",
+            "program_number": 55,
+            "url": "dvb://243000.6875.3.645"
+        },
+        {
+            "name": "重庆卫视",
+            "program_number": 56,
+            "url": "dvb://243000.6875.3.646"
+        },
+        {
+            "name": "高清预留",
+            "program_number": 370,
+            "url": "dvb://243000.6875.3.647"
+        },
+        {
+            "name": "中央中国之声",
+            "program_number": 321,
+            "url": "dvb://259000.6875.3.6a5"
+        },
+        {
+            "name": "中央经济之声",
+            "program_number": 322,
+            "url": "dvb://259000.6875.3.6a6"
+        },
+        {
+            "name": "中央音乐之声",
+            "program_number": 323,
+            "url": "dvb://259000.6875.3.6a7"
+        },
+        {
+            "name": "华夏之声 - 双语",
+            "program_number": 324,
+            "url": "dvb://259000.6875.3.6a8"
+        },
+        {
+            "name": "中央英语广播",
+            "program_number": 325,
+            "url": "dvb://259000.6875.3.6a9"
+        },
+        {
+            "name": "内蒙蒙语广播",
+            "program_number": 326,
+            "url": "dvb://259000.6875.3.6aa"
+        },
+        {
+            "name": "内蒙交通之声",
+            "program_number": 327,
+            "url": "dvb://259000.6875.3.6ab"
+        },
+        {
+            "name": "内蒙评书曲艺",
+            "program_number": 328,
+            "url": "dvb://259000.6875.3.6ac"
+        },
+        {
+            "name": "内蒙汉语新闻",
+            "program_number": 329,
+            "url": "dvb://259000.6875.3.6ad"
+        },
+        {
+            "name": "内蒙音乐之声",
+            "program_number": 330,
+            "url": "dvb://259000.6875.3.6ae"
+        },
+        {
+            "name": "河南卫视",
+            "program_number": 57,
+            "url": "dvb://259000.6875.3.6af"
+        },
+        {
+            "name": "江西卫视",
+            "program_number": 58,
+            "url": "dvb://259000.6875.3.6b0"
+        },
+        {
+            "name": "城市建设",
+            "program_number": 127,
+            "url": "dvb://259000.6875.3.6b1"
+        },
+        {
+            "name": "留学世界",
+            "program_number": 128,
+            "url": "dvb://259000.6875.3.6b2"
+        },
+        {
+            "name": "生活频道",
+            "program_number": 54,
+            "url": "dvb://259000.6875.3.6b3"
+        },
+        {
+            "name": "快乐宠物",
+            "program_number": 112,
+            "url": "dvb://291000.6875.3.709"
+        },
+        {
+            "name": "CETV - 1",
+            "program_number": 113,
+            "url": "dvb://291000.6875.3.70a"
+        },
+        {
+            "name": "法律服务",
+            "program_number": 114,
+            "url": "dvb://291000.6875.3.70b"
+        },
+        {
+            "name": "碟市",
+            "program_number": 115,
+            "url": "dvb://291000.6875.3.70c"
+        },
+        {
+            "name": "职业指南",
+            "program_number": 116,
+            "url": "dvb://291000.6875.3.70d"
+        },
+        {
+            "name": "摄影频道",
+            "program_number": 117,
+            "url": "dvb://291000.6875.3.70e"
+        },
+        {
+            "name": "家庭理财",
+            "program_number": 118,
+            "url": "dvb://291000.6875.3.70f"
+        },
+        {
+            "name": "都市剧场",
+            "program_number": 87,
+            "url": "dvb://307000.6875.3.76d"
+        },
+        {
+            "name": "中视购物",
+            "program_number": 60,
+            "url": "dvb://307000.6875.3.76e"
+        },
+        {
+            "name": "七彩戏剧",
+            "program_number": 88,
+            "url": "dvb://307000.6875.3.76f"
+        },
+        {
+            "name": "极速汽车",
+            "program_number": 89,
+            "url": "dvb://307000.6875.3.770"
+        },
+        {
+            "name": "法治天地",
+            "program_number": 90,
+            "url": "dvb://307000.6875.3.771"
+        },
+        {
+            "name": "魅力音乐",
+            "program_number": 91,
+            "url": "dvb://307000.6875.3.772"
+        },
+        {
+            "name": "天元围棋",
+            "program_number": 119,
+            "url": "dvb://307000.6875.3.773"
+        },
+        {
+            "name": "好享购物",
+            "program_number": 66,
+            "url": "dvb://307000.6875.3.774"
+        },
+        {
+            "name": "兵团卫视",
+            "program_number": 67,
+            "url": "dvb://307000.6875.3.775"
+        },
+        {
+            "name": "金色频道",
+            "program_number": 92,
+            "url": "dvb://315000.6875.3.7d1"
+        },
+        {
+            "name": "说文解字",
+            "program_number": 93,
+            "url": "dvb://315000.6875.3.7d2"
+        },
+        {
+            "name": "文物宝库",
+            "program_number": 94,
+            "url": "dvb://315000.6875.3.7d3"
+        },
+        {
+            "name": "发现之旅",
+            "program_number": 95,
+            "url": "dvb://315000.6875.3.7d4"
+        },
+        {
+            "name": "中学生",
+            "program_number": 96,
+            "url": "dvb://315000.6875.3.7d5"
+        },
+        {
+            "name": "CHC动作电影",
+            "program_number": 97,
+            "url": "dvb://315000.6875.3.7d6"
+        },
+        {
+            "name": "欢笑剧场",
+            "program_number": 98,
+            "url": "dvb://315000.6875.3.7d7"
+        },
+        {
+            "name": "国防军事",
+            "program_number": 120,
+            "url": "dvb://379000.6875.3.835"
+        },
+        {
+            "name": "证券资讯",
+            "program_number": 121,
+            "url": "dvb://379000.6875.3.836"
+        },
+        {
+            "name": "中国气象",
+            "program_number": 122,
+            "url": "dvb://379000.6875.3.837"
+        },
+        {
+            "name": "东方财经",
+            "program_number": 156,
+            "url": "dvb://379000.6875.3.838"
+        },
+        {
+            "name": "靓妆",
+            "program_number": 124,
+            "url": "dvb://379000.6875.3.839"
+        },
+        {
+            "name": "书画频道",
+            "program_number": 125,
+            "url": "dvb://379000.6875.3.83a"
+        },
+        {
+            "name": "欧洲足球",
+            "program_number": 126,
+            "url": "dvb://379000.6875.3.83b"
+        },
+        {
+            "name": "英语辅导",
+            "program_number": 129,
+            "url": "dvb://482000.6875.3.899"
+        },
+        {
+            "name": "高尔夫.网球",
+            "program_number": 130,
+            "url": "dvb://482000.6875.3.89a"
+        },
+        {
+            "name": "老年福",
+            "program_number": 131,
+            "url": "dvb://482000.6875.3.89b"
+        },
+        {
+            "name": "彩民在线",
+            "program_number": 132,
+            "url": "dvb://482000.6875.3.89c"
+        },
+        {
+            "name": "幼儿教育",
+            "program_number": 133,
+            "url": "dvb://482000.6875.3.89d"
+        },
+        {
+            "name": "新科动漫",
+            "program_number": 134,
+            "url": "dvb://482000.6875.3.89e"
+        },
+        {
+            "name": "青海卫视",
+            "program_number": 64,
+            "url": "dvb://482000.6875.3.89f"
+        },
+        {
+            "name": "党员教育",
+            "program_number": 65,
+            "url": "dvb://482000.6875.3.8a0"
+        },
+        {
+            "name": "快乐垂钓",
+            "program_number": 135,
+            "url": "dvb://490000.6875.3.8fd"
+        },
+        {
+            "name": "老故事",
+            "program_number": 136,
+            "url": "dvb://490000.6875.3.8fe"
+        },
+        {
+            "name": "女性时尚",
+            "program_number": 137,
+            "url": "dvb://490000.6875.3.8ff"
+        },
+        {
+            "name": "现代女性",
+            "program_number": 138,
+            "url": "dvb://490000.6875.3.900"
+        },
+        {
+            "name": "环球奇观",
+            "program_number": 139,
+            "url": "dvb://490000.6875.3.901"
+        },
+        {
+            "name": "中华美食",
+            "program_number": 140,
+            "url": "dvb://490000.6875.3.902"
+        },
+        {
+            "name": "风尚购物",
+            "program_number": 68,
+            "url": "dvb://490000.6875.3.903"
+        },
+        {
+            "name": "标清预留",
+            "program_number": 69,
+            "url": "dvb://490000.6875.3.904"
+        },
+        {
+            "name": "梨园频道",
+            "program_number": 150,
+            "url": "dvb://498000.6875.3.961"
+        },
+        {
+            "name": "CCTV - 10",
+            "program_number": 151,
+            "url": "dvb://498000.6875.3.962"
+        },
+        {
+            "name": "金鹰卡通",
+            "program_number": 81,
+            "url": "dvb://498000.6875.3.963"
+        },
+        {
+            "name": "CCTV - NEWS",
+            "program_number": 153,
+            "url": "dvb://498000.6875.3.964"
+        },
+        {
+            "name": "CCTV - 少儿",
+            "program_number": 154,
+            "url": "dvb://498000.6875.3.965"
+        },
+        {
+            "name": "卫生健康",
+            "program_number": 83,
+            "url": "dvb://498000.6875.3.966"
+        },
+        {
+            "name": "CCTV - 音乐",
+            "program_number": 155,
+            "url": "dvb://498000.6875.3.967"
+        },
+        {
+            "name": "CCTV高清",
+            "program_number": 352,
+            "url": "dvb://387000.6875.3.bb9"
+        },
+        {
+            "name": "黑龙江卫视高清",
+            "program_number": 354,
+            "url": "dvb://387000.6875.3.bba"
+        },
+        {
+            "name": "CHC高清电影",
+            "program_number": 353,
+            "url": "dvb://387000.6875.3.bbb"
+        },
+        {
+            "name": "CCTV - 8高清",
+            "program_number": 364,
+            "url": "dvb://387000.6875.3.bbc"
+        },
+        {
+            "name": "浙江卫视高清",
+            "program_number": 355,
+            "url": "dvb://411000.6875.3.c1d"
+        },
+        {
+            "name": "CCTV - 1高清",
+            "program_number": 351,
+            "url": "dvb://411000.6875.3.c1e"
+        },
+        {
+            "name": "江苏卫视高清",
+            "program_number": 359,
+            "url": "dvb://411000.6875.3.c1f"
+        },
+        {
+            "name": "FTV影视高清",
+            "program_number": 365,
+            "url": "dvb://411000.6875.3.c20"
+        },
+        {
+            "name": "家庭影院",
+            "program_number": 80,
+            "url": "dvb://283000.6875.3.c9"
+        },
+        {
+            "name": "时代美食",
+            "program_number": 99,
+            "url": "dvb://283000.6875.3.ca"
+        },
+        {
+            "name": "时代风尚",
+            "program_number": 100,
+            "url": "dvb://283000.6875.3.cb"
+        },
+        {
+            "name": "新娱乐",
+            "program_number": 101,
+            "url": "dvb://283000.6875.3.cc"
+        },
+        {
+            "name": "时代家居",
+            "program_number": 102,
+            "url": "dvb://283000.6875.3.cd"
+        },
+        {
+            "name": "时代出行",
+            "program_number": 103,
+            "url": "dvb://283000.6875.3.ce"
+        },
+        {
+            "name": "四海钓鱼",
+            "program_number": 104,
+            "url": "dvb://283000.6875.3.cf"
+        },
+        {
+            "name": "湖南卫视高清",
+            "program_number": 356,
+            "url": "dvb://506000.6875.3.c81"
+        },
+        {
+            "name": "北京卫视高清",
+            "program_number": 357,
+            "url": "dvb://506000.6875.3.c82"
+        },
+        {
+            "name": "东方卫视高清",
+            "program_number": 358,
+            "url": "dvb://506000.6875.3.c83"
+        },
+        {
+            "name": "FTV综艺高清",
+            "program_number": 366,
+            "url": "dvb://506000.6875.3.c84"
+        },
+        {
+            "name": "3D频道",
+            "program_number": 360,
+            "url": "dvb://514000.6875.3.ce5"
+        },
+        {
+            "name": "CCTV - 3高清",
+            "program_number": 361,
+            "url": "dvb://514000.6875.3.ce6"
+        },
+        {
+            "name": "CCTV - 5高清",
+            "program_number": 362,
+            "url": "dvb://514000.6875.3.ce7"
+        },
+        {
+            "name": "高清预留",
+            "program_number": 363,
+            "url": "dvb://514000.6875.3.ce8"
+        },
+        {
+            "name": "阳光视讯1",
+            "program_number": 61,
+            "url": "dvb://347000.6875.3.fa1"
+        },
+        {
+            "name": "阳光视讯3",
+            "program_number": 63,
+            "url": "dvb://355000.6875.3.1005"
+        },
+        {
+            "name": "股票(预留)",
+            "program_number": 731,
+            "url": "dvb://355000.6875.3.fa2"
+        },
+        {
+            "name": "阳光视讯2",
+            "program_number": 62,
+            "url": "dvb://363000.6875.3.1069"
+        },
+        {
+            "name": "互动应用",
+            "program_number": 798,
+            "url": "dvb://443000.6875.3.10cd"
+        },
+        {
+            "name": "内蒙古新闻",
+            "program_number": 792,
+            "url": "dvb://522000.6875.3.1131"
+        },
+        {
+            "name": "呼包鄂新闻",
+            "program_number": 793,
+            "url": "dvb://522000.6875.3.1132"
+        },
+        {
+            "name": "新闻其它1",
+            "program_number": 794,
+            "url": "dvb://522000.6875.3.1133"
+        },
+        {
+            "name": "新闻其它2",
+            "program_number": 795,
+            "url": "dvb://522000.6875.3.1134"
+        },
+        {
+            "name": "新闻其它3",
+            "program_number": 796,
+            "url": "dvb://522000.6875.3.1135"
+        },
+        {
+            "name": "新闻其它4",
+            "program_number": 797,
+            "url": "dvb://522000.6875.3.1136"
+        },
+        {
+            "name": "CCTV - 11",
+            "program_number": 152,
+            "url": "dvb://299000.6875.3.12d"
+        },
+        {
+            "name": "家有购物",
+            "program_number": 59,
+            "url": "dvb://299000.6875.3.12e"
+        },
+        {
+            "name": "全纪实",
+            "program_number": 82,
+            "url": "dvb://299000.6875.3.12f"
+        },
+        {
+            "name": "游戏风云",
+            "program_number": 123,
+            "url": "dvb://299000.6875.3.130"
+        },
+        {
+            "name": "动漫秀场",
+            "program_number": 84,
+            "url": "dvb://299000.6875.3.131"
+        },
+        {
+            "name": "劲爆体育",
+            "program_number": 85,
+            "url": "dvb://299000.6875.3.132"
+        },
+        {
+            "name": "幸福彩",
+            "program_number": 86,
+            "url": "dvb://299000.6875.3.133"
+        },
+        {
+            "name": "收藏天下",
+            "program_number": 105,
+            "url": "dvb://275000.6875.3.191"
+        },
+        {
+            "name": "考试在线",
+            "program_number": 106,
+            "url": "dvb://275000.6875.3.192"
+        },
+        {
+            "name": "车迷频道",
+            "program_number": 107,
+            "url": "dvb://275000.6875.3.193"
+        },
+        {
+            "name": "优优宝贝",
+            "program_number": 108,
+            "url": "dvb://275000.6875.3.194"
+        },
+        {
+            "name": "读书频道",
+            "program_number": 109,
+            "url": "dvb://275000.6875.3.195"
+        },
+        {
+            "name": "环球旅游",
+            "program_number": 110,
+            "url": "dvb://275000.6875.3.196"
+        },
+        {
+            "name": "家庭健康",
+            "program_number": 111,
+            "url": "dvb://275000.6875.3.197"
+        },
+        {
+            "name": "少儿频道",
+            "program_number": 28,
+            "url": "dvb://251000.6875.3.1f5"
+        },
+        {
+            "name": "旅游卫视",
+            "program_number": 29,
+            "url": "dvb://251000.6875.3.1f6"
+        },
+        {
+            "name": "辽宁卫视",
+            "program_number": 38,
+            "url": "dvb://251000.6875.3.1f7"
+        },
+        {
+            "name": "吉林卫视",
+            "program_number": 40,
+            "url": "dvb://251000.6875.3.1f8"
+        },
+        {
+            "name": "湖北卫视",
+            "program_number": 32,
+            "url": "dvb://251000.6875.3.1f9"
+        },
+        {
+            "name": "宣传频道",
+            "program_number": 17,
+            "url": "dvb://251000.6875.3.1fa"
+        },
+        {
+            "name": "高清预留",
+            "program_number": 367,
+            "url": "dvb://251000.6875.3.1fb"
+        },
+        {
+            "name": "呼和浩特 - 1",
+            "program_number": 25,
+            "url": "dvb://267000.6875.3.1f41"
+        },
+        {
+            "name": "呼和浩特 - 2",
+            "program_number": 26,
+            "url": "dvb://267000.6875.3.1f42"
+        },
+        {
+            "name": "呼和浩特 - 3",
+            "program_number": 27,
+            "url": "dvb://267000.6875.3.1f43"
+        },
+        {
+            "name": "第一剧场",
+            "program_number": 141,
+            "url": "dvb://419000.6875.3.259"
+        },
+        {
+            "name": "风云剧场",
+            "program_number": 142,
+            "url": "dvb://419000.6875.3.25a"
+        },
+        {
+            "name": "世界地理",
+            "program_number": 143,
+            "url": "dvb://419000.6875.3.25b"
+        },
+        {
+            "name": "风云音乐",
+            "program_number": 144,
+            "url": "dvb://419000.6875.3.25c"
+        },
+        {
+            "name": "风云足球",
+            "program_number": 145,
+            "url": "dvb://419000.6875.3.25d"
+        },
+        {
+            "name": "先锋乒羽",
+            "program_number": 146,
+            "url": "dvb://419000.6875.3.25e"
+        },
+        {
+            "name": "怀旧剧场",
+            "program_number": 147,
+            "url": "dvb://419000.6875.3.25f"
+        },
+        {
+            "name": "央视精品",
+            "program_number": 148,
+            "url": "dvb://419000.6875.3.260"
+        },
+        {
+            "name": "电视指南",
+            "program_number": 149,
+            "url": "dvb://419000.6875.3.261"
+        },
+        {
+            "name": "广东卫视",
+            "program_number": 33,
+            "url": "dvb://163000.6875.3.2bd"
+        },
+        {
+            "name": "云南卫视",
+            "program_number": 34,
+            "url": "dvb://163000.6875.3.2be"
+        },
+        {
+            "name": "山西卫视",
+            "program_number": 35,
+            "url": "dvb://163000.6875.3.2bf"
+        },
+        {
+            "name": "贵州卫视",
+            "program_number": 36,
+            "url": "dvb://163000.6875.3.2c0"
+        },
+        {
+            "name": "东方卫视",
+            "program_number": 37,
+            "url": "dvb://163000.6875.3.2c1"
+        },
+        {
+            "name": "浙江卫视",
+            "program_number": 30,
+            "url": "dvb://163000.6875.3.2c2"
+        },
+        {
+            "name": "高清预留",
+            "program_number": 368,
+            "url": "dvb://163000.6875.3.2c3"
+        },
+        {
+            "name": "山东卫视",
+            "program_number": 39,
+            "url": "dvb://227000.6875.3.385"
+        },
+        {
+            "name": "江苏卫视",
+            "program_number": 31,
+            "url": "dvb://227000.6875.3.386"
+        },
+        {
+            "name": "黑龙江卫视",
+            "program_number": 41,
+            "url": "dvb://227000.6875.3.387"
+        },
+        {
+            "name": "广西卫视",
+            "program_number": 42,
+            "url": "dvb://227000.6875.3.388"
+        },
+        {
+            "name": "陕西卫视",
+            "program_number": 43,
+            "url": "dvb://227000.6875.3.389"
+        },
+        {
+            "name": "安徽卫视",
+            "program_number": 44,
+            "url": "dvb://227000.6875.3.38a"
+        },
+        {
+            "name": "高清预留",
+            "program_number": 369,
+            "url": "dvb://227000.6875.3.38b"
+        },
+        {
+            "name": "北京卫视",
+            "program_number": 45,
+            "url": "dvb://235000.6875.3.3e9"
+        },
+        {
+            "name": "东南卫视",
+            "program_number": 46,
+            "url": "dvb://235000.6875.3.3ea"
+        },
+        {
+            "name": "河北卫视",
+            "program_number": 47,
+            "url": "dvb://235000.6875.3.3eb"
+        },
+        {
+            "name": "天津卫视",
+            "program_number": 48,
+            "url": "dvb://235000.6875.3.3ec"
+        },
+        {
+            "name": "湖南卫视",
+            "program_number": 49,
+            "url": "dvb://235000.6875.3.3ed"
+        },
+        {
+            "name": "四川卫视",
+            "program_number": 50,
+            "url": "dvb://235000.6875.3.3ee"
+        },
+        {
+            "name": "CCTV - 1",
+            "program_number": 1,
+            "url": "dvb://395000.6875.3.44d"
+        },
+        {
+            "name": "快乐购物",
+            "program_number": 14,
+            "url": "dvb://395000.6875.3.44e"
+        },
+        {
+            "name": "家家购物",
+            "program_number": 16,
+            "url": "dvb://395000.6875.3.44f"
+        },
+        {
+            "name": "汉语卫视",
+            "program_number": 19,
+            "url": "dvb://395000.6875.3.450"
+        },
+        {
+            "name": "蒙语卫视",
+            "program_number": 18,
+            "url": "dvb://395000.6875.3.451"
+        },
+        {
+            "name": "标清预留",
+            "program_number": 319,
+            "url": "dvb://395000.6875.3.452"
+        },
+        {
+            "name": "CCTV - 3",
+            "program_number": 3,
+            "url": "dvb://403000.6875.3.4b1"
+        },
+        {
+            "name": "CCTV - 4",
+            "program_number": 4,
+            "url": "dvb://403000.6875.3.4b2"
+        },
+        {
+            "name": "CCTV - 5",
+            "program_number": 5,
+            "url": "dvb://403000.6875.3.4b3"
+        },
+        {
+            "name": "CCTV - 6",
+            "program_number": 6,
+            "url": "dvb://403000.6875.3.4b4"
+        },
+        {
+            "name": "CCTV - 8",
+            "program_number": 8,
+            "url": "dvb://403000.6875.3.4b5"
+        },
+        {
+            "name": "CCTV - 9",
+            "program_number": 9,
+            "url": "dvb://403000.6875.3.4b6"
+        },
+        {
+            "name": "CCTV - 2",
+            "program_number": 2,
+            "url": "dvb://139000.6875.3.515"
+        },
+        {
+            "name": "CCTV - 7",
+            "program_number": 7,
+            "url": "dvb://139000.6875.3.516"
+        },
+        {
+            "name": "央广购物",
+            "program_number": 10,
+            "url": "dvb://139000.6875.3.517"
+        },
+        {
+            "name": "优购物",
+            "program_number": 11,
+            "url": "dvb://139000.6875.3.518"
+        },
+        {
+            "name": "CCTV - 12",
+            "program_number": 12,
+            "url": "dvb://139000.6875.3.519"
+        },
+        {
+            "name": "环球购物",
+            "program_number": 15,
+            "url": "dvb://139000.6875.3.51a"
+        },
+        {
+            "name": "CCTV - 1",
+            "program_number": 320,
+            "url": "dvb://139000.6875.3.51b"
+        },
+        {
+            "name": "经济生活",
+            "program_number": 20,
+            "url": "dvb://155000.6875.3.579"
+        },
+        {
+            "name": "文体娱乐",
+            "program_number": 21,
+            "url": "dvb://155000.6875.3.57a"
+        },
+        {
+            "name": "影视剧",
+            "program_number": 22,
+            "url": "dvb://155000.6875.3.57b"
+        },
+        {
+            "name": "新闻综合",
+            "program_number": 23,
+            "url": "dvb://155000.6875.3.57c"
+        },
+        {
+            "name": "蒙古语文化",
+            "program_number": 24,
+            "url": "dvb://155000.6875.3.57d"
+        },
+        {
+            "name": "CCTV - 新闻",
+            "program_number": 13,
+            "url": "dvb://155000.6875.3.57e"
+        },
+        {
+            "name": "西藏卫视",
+            "program_number": 70,
+            "url": "dvb://155000.6875.3.57f"
+        }
+    ],
+    "version": 1.0
+}

@@ -1,0 +1,19 @@
+body{margin:0;padding:0;background:url("../images/bg.gif")}
+body, td{font-size:12px}
+.menu_box_pad{background:#fdf9d5;padding:0 2px 2px 2px}
+.menu_box{border-top:1px solid #ababab;border-left:1px solid #ababab;border-right:1px solid #d6d6d6;border-bottom:1px solid #d6d6d6}
+.menu_box th{background:url('../images/menu_list_icon.gif') no-repeat center;line-height:22px;width:10px}
+.menu_box td{background:url('../images/menu_list_split.gif') no-repeat left bottom;line-height:20px}
+.menu_box a{text-decoration:none;color:#000}
+.menu_box a:hover {text-decoration:underline}
+.hand{cursor:hand;cursor:pointer}
+.ctrl_menu{border-left:1px solid #767676;border-bottom:1px solid #767676;border-right:1px solid #767676;background:#ffcf60}
+.ctrl_menu_title{padding-left:15px;font-weight:bold;line-height:25px}
+.ctrl_menu_title_bg{background:url('images/menu_title_bg.gif')}
+.top_bg{background:url("../images/top_bg.gif")}
+.logo_bg{background:url("../images/logo_bg.gif")}
+.a01 a:link, .a01 a:visited {text-decoration:underline;color:#000;}
+.a01 a:active, .a01 a:hover {text-decoration:none;color:#000;}
+#top_nav_menu {color:#fff}
+#top_nav_menu a{text-decoration:none;color:#fff}
+#top_nav_menu a:hover{text-decoration:underline;color:#ff6}
